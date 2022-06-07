@@ -1,4 +1,5 @@
 {
+  "name": "landian",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -14,9 +15,13 @@
     "@fontsource/roboto": "^4.5.1",
     "@mui/icons-material": "^5.6.2",
     "@mui/material": "^5.7.0",
+    "i18n-next": "^0.0.4",
+    "i18next": "^21.8.8",
     "next": "^12.1.6",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-i18next": "^11.17.0",
+    "react-icons": "^4.4.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.33",
