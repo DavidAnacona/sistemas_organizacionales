@@ -4,6 +4,7 @@ import Header from 'shared/components/Header';
 import Lottie from 'react-lottie';
 import animationData from '../public/2022/03/101036-coff3.json';
 import Box from '@mui/material/Box';
+import Footer from 'shared/components/Footer';
 
 const About = () => {
 	const { t } = useTranslation('translation', {
@@ -18,13 +19,11 @@ const About = () => {
 	};
 	return (
 		<div>
-			<Box>
-				<p>Hola mundo</p>
-			</Box>
 			<Header />
 			<p>{t('title')}</p>
 			{/* ? animation */}
 			<Lottie options={defaultOptions} height={500} width={500} />
+			<Footer />
 		</div>
 	);
 };
