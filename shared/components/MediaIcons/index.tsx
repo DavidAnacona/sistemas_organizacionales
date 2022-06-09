@@ -3,7 +3,7 @@ import { AiFillInstagram } from 'react-icons/ai';
 
 const MediaIcons = () => {
 	return (
-		<Box sx={{ position: 'fixed', display: 'flex', flexDirection: 'column', right: 0, top: '80px' }}>
+		<Box sx={{ position: 'fixed', display: 'flex', flexDirection: 'column', right: 0, top: '90px' }}>
 			<IconButton>
 				<AiFillInstagram />
 			</IconButton>
