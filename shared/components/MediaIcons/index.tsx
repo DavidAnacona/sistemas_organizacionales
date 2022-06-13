@@ -1,5 +1,16 @@
+import { AccessTimeFilledTwoTone } from '@mui/icons-material';
 import { Box, IconButton } from '@mui/material';
-import { AiFillInstagram } from 'react-icons/ai';
+import {
+	AiFillDatabase,
+	AiFillFacebook,
+	AiFillInstagram,
+	AiFillLinkedin,
+	AiFillRedditSquare,
+	AiFillTwitterCircle,
+	AiFillTwitterSquare,
+	AiFillWindows,
+	AiFillYoutube,
+} from 'react-icons/ai';
 
 const MediaIcons = () => {
 	return (
@@ -8,19 +19,31 @@ const MediaIcons = () => {
 				<AiFillInstagram />
 			</IconButton>
 			<IconButton>
-				<AiFillInstagram />
+				<AiFillTwitterCircle />
 			</IconButton>
 			<IconButton>
-				<AiFillInstagram />
+				<AiFillFacebook />
 			</IconButton>
 			<IconButton>
-				<AiFillInstagram />
+				<AccessTimeFilledTwoTone />
 			</IconButton>
 			<IconButton>
-				<AiFillInstagram />
+				<AiFillYoutube />
 			</IconButton>
 			<IconButton>
-				<AiFillInstagram />
+				<AiFillLinkedin />
+			</IconButton>
+			<IconButton>
+				<AiFillTwitterSquare />
+			</IconButton>
+			<IconButton>
+				<AiFillRedditSquare />
+			</IconButton>
+			<IconButton>
+				<AiFillDatabase />
+			</IconButton>
+			<IconButton>
+				<AiFillWindows />
 			</IconButton>
 		</Box>
 	);

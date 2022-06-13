@@ -1,9 +1,26 @@
 export const homepage = {
-	title: 'BIENVENIDO A LANDIAN,EL FUTURO DEL METAVERSO',
+	title: `BIENVENIDO A LANDIAN,
+	 EL FUTURO DEL
+	 METAVERSO`,
+	toggleMore: '... Leer más',
+	toggleLess: 'Leer menos ...',
+	information: 'Más información en nuestro',
+	seccionLink: 'Enlaces relacionados:',
+	seccion: {
+		1: 'Introducción',
+		2: 'Tecnología',
+		3: 'Ecosistema',
+		4: 'Economía',
+		5: 'Conexión',
+		6: 'El futuro',
+		7: 'Equipo',
+		8: 'Experiencia',
+		9: 'Suscribirse',
+	},
 	Introduction: {
 		title: 'Introducción de Landian',
 		description:
-			'Landian existe para que las personas, las empresas, las organizaciones y las culturas puedan participar en el Metaverso sin trabas ni limitaciones. Además, es donde convertirse en cualquier persona o cosa solamente está limitado por la imaginación. La capacidad de uno para evolucionar y prosperar viene determinada por el nivel de esfuerzo.En Landian, nuestro objetivo es aprovechar el crecimiento colectivo de los mundos virtuales, haciéndolos más interactivos, accesibles y fáciles de navegar.Recompensar la creatividad y la interacción social es lo que tienen en común todas las grandes sociedades. Por eso Landian está repleto de incentivos interesantes que estimulan el compromiso de los usuarios y las actividades comerciales. Además, se rige por un sistema de valores compartidos que beneficia a fundadores y usuarios.El Metaverso es un entorno virtual que ofrece a los usuarios la oportunidad de crear experiencias y relacionarse con otras personas de todo el mundo. El metaverso es inevitable, pero el concepto no es nuevo. Durante décadas hemos llegado a depender de adaptaciones similares centradas en el comercio, las interacciones sociales y las interpretaciones únicas de la expresión personal.Bienvenido al mundo de Landian y a la próxima evolución del Metaverso de la cooperación, la comunicación, la narración de historias y las respuestas emocionales sin los impedimentos que suelen crear la distancia, el tiempo, el dinero, la raza y la religión.',
+			'Landian existe para que las personas, las empresas, las organizaciones y las culturas puedan participar en el Metaverso sin trabas ni limitaciones. Además, es donde convertirse en cualquier persona o cosa solamente está limitado por la imaginación. La capacidad de uno para evolucionar y prosperar viene determinada por el nivel de esfuerzo.En Landian, nuestro objetivo es aprovechar el crecimiento colectivo de los mundos virtuales, haciéndolos más interactivos, accesibles y fáciles de navegar. Recompensar la creatividad y la interacción social es lo que tienen en común todas las grandes sociedades.Por eso Landian está repleto de incentivos interesantes que estimulan el compromiso de los usuarios y las actividades comerciales.Además, se rige por un sistema de valores compartidos que beneficia a fundadores y usuarios. El Metaverso es un entorno virtual que ofrece a los usuarios la oportunidad de crear experiencias y relacionarse con otras personas de todo el mundo.El metaverso es inevitable, pero el concepto no es nuevo.Durante décadas hemos llegado a depender de adaptaciones similares centradas en el comercio, las interacciones sociales y las interpretaciones únicas de la expresión personal.Bienvenido al mundo de Landian y a la próxima evolución del Metaverso de la cooperación, la comunicación, la narración de historias y las respuestas emocionales sin los impedimentos que suelen crear la distancia, el tiempo, el dinero, la raza y la religión.',
 		relatedLink: [
 			'Convertirse en Landian',
 			'Sé todo lo que quieras ser',

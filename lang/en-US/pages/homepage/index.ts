@@ -1,9 +1,24 @@
 export const homepage = {
 	title: 'WELCOME TO LANDIAN, THE FUTURE OF METAVERSE',
+	toggleMore: '... Read more',
+	toggleLess: 'Read less ...',
+	information: 'Learn more in our',
+	seccionLink: 'Related links:',
+	seccion: {
+		1: 'Introduction',
+		2: 'Technology',
+		3: 'Ecosystem',
+		4: 'Economics',
+		5: 'Connection',
+		6: 'The future',
+		7: 'Team',
+		8: 'Experience',
+		9: 'Suscribe',
+	},
 	Introduction: {
 		title: 'Landian Introduction',
 		description:
-			'Landian exists so that people, businesses, organizations, and cultures can engage in the Metaverse unencumbered and without limitations. Moreover, it is where becoming anyone or anything is limited only by the imagination. One’s ability to evolve and thrive is determined by level of effort. At Landian, our focus is to build on the collective growth of virtual worlds by making them more interactive, accessible, and easier to navigate.Rewarding creativity and social interaction is what all great societies have in common. That is why Landian is packed with exciting incentives that stimulate user engagement and commerce. Plus, it is governed by a shared value system that benefits founders and users. The Metaverse is a virtual environment that gives users the opportunity to create experiences and engage with others from around the world. The Metaverse is inevitable, and yet the concept is far from new. Over decades we have come to depend on similar adaptations centered on commerce, social interactions, and unique interpretations of personal expression. Welcome to the world of Landian and the Metaverse’s next evolution of cooperation, communication, storytelling, and emotional responses without the impediments often created by distance, time, money, race, and religion.',
+			'Landian exists so that people, businesses, organizations, and cultures can engage in the Metaverse unencumbered and without limitations. Moreover, it is where becoming anyone or anything is limited only by the imagination.One’s ability to evolve and thrive is determined by level of effort. At Landian, our focus is to build on the collective growth of virtual worlds by making them more interactive, accessible, and easier to navigate. Rewarding creativity and social interaction is what all great societies have in common.That is why Landian is packed with exciting incentives that stimulate user engagement and commerce.Plus, it is governed by a shared value system that benefits founders and users.The Metaverse is a virtual environment that gives users the opportunity to create experiences and engage with others from around the world.The Metaverse is inevitable, and yet the concept is far from new.Over decades we have come to depend on similar adaptations centered on commerce, social interactions, and unique interpretations of personal expression.Welcome to the world of Landian and the Metaverse’s next evolution of cooperation, communication, storytelling, and emotional responses without the impediments often created by distance, time, money, race, and religion.',
 		relatedLink: [
 			'Becoming Landian',
 			'Be Anything You Want to Be',

@@ -1,11 +1,13 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'react-i18next';
 import { Box, Stack, Typography, Paper, MenuItem, Select, FormControl } from '@mui/material';
 import { useStyles } from './styled';
 import Link from 'next/link';
 import Image from 'next/image';
 
 const Header = () => {
+	const { t } = useTranslation();
 	const router = useRouter();
 
 	const handleLocaleChange = (event: any) => {
@@ -27,12 +29,12 @@ const Header = () => {
 						</Link>
 					</Box>
 					<Stack direction="row" spacing={3} alignItems="center">
-						<Typography>Home</Typography>
-						<Typography>LNDA</Typography>
-						<Typography>News</Typography>
-						<Typography>Whitepaper</Typography>
-						<Typography>Media</Typography>
-						<Typography>Contact</Typography>
+						<Typography>{t('navbar.options.0')}</Typography>
+						<Typography>{t('navbar.options.1')}</Typography>
+						<Typography>{t('navbar.options.2')}</Typography>
+						<Typography>{t('navbar.options.3')}</Typography>
+						<Typography>{t('navbar.options.4')}</Typography>
+						<Typography>{t('navbar.options.5')}</Typography>
 						<FormControl sx={styles.formcontrol} size="small">
 							<Select onChange={handleLocaleChange} value={router.locale}>
 								<MenuItem value="en-US">EN</MenuItem>

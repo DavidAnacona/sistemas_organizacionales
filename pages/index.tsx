@@ -3,12 +3,20 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import { useTranslation } from 'react-i18next';
-import { Box, Typography, Stack, Button } from '@mui/material';
+import { Box, Typography, Stack, Button, AutocompleteFreeSoloValueMapping } from '@mui/material';
 import Header from 'shared/components/Header';
 import MediaIcons from 'shared/components/MediaIcons';
 import Footer from 'shared/components/Footer';
 import Lottie from 'react-lottie';
-import animationData from '../public/2022/03/100803-layers4.json';
+import animationData from '../public/2022/03/100801-eyes-intro.json';
+import animationData1 from '../public/2022/03/100739-tec3.json';
+import animationData2 from '../public/2022/03/100788-builds3.json';
+import Imagen from '../public/2022/backgroundSeccion.png';
+import background from '../public/2022/backgroundMain.png';
+import { Props } from 'next/script';
+import { FC, useState } from 'react';
+import { useStyles } from 'styles/homepage/styled';
+import { maxWidth } from '@mui/system';
 
 const Home: NextPage = () => {
 	const { t } = useTranslation();
@@ -18,6 +26,119 @@ const Home: NextPage = () => {
 		autoplay: true,
 		animationData: animationData,
 		renderer: 'svg',
+	};
+
+	const defaultOptions1 = {
+		loop: true,
+		autoplay: true,
+		animationData: animationData1,
+		renderer: 'svg',
+	};
+
+	const defaultOptions2 = {
+		loop: true,
+		autoplay: true,
+		animationData: animationData2,
+		renderer: 'svg',
+	};
+
+	const ReadMore: FC<Props> = ({ children }) => {
+		const styled = useStyles();
+		const { t } = useTranslation();
+		if (typeof children === 'string') {
+			const text: string = children;
+			const [isReadMore, setIsReadMore] = useState(true);
+			const toggleReadMore = () => {
+				setIsReadMore(!isReadMore);
+			};
+			return (
+				<Typography variant="body1" sx={styled.text}>
+					{isReadMore ? text?.slice(0, 496) : text}
+					<span style={{ display: 'block', cursor: 'pointer' }} onClick={toggleReadMore}>
+						{isReadMore ? t('homepage.toggleMore') : t('homepage.toggleLess')}
+					</span>
+				</Typography>
+			);
+		} else {
+			return <p></p>;
+		}
+	};
+
+	const Content = () => {
+		const styled = useStyles();
+		return (
+			<Box sx={styled.container}>
+				<Typography variant="body1">
+					<ReadMore>{t('homepage.Introduction.description')}</ReadMore>
+				</Typography>
+			</Box>
+		);
+	};
+
+	const ReadMore1: FC<Props> = ({ children }) => {
+		const styled = useStyles();
+		const { t } = useTranslation();
+		if (typeof children === 'string') {
+			const text: string = children;
+			const [isReadMore, setIsReadMore] = useState(true);
+			const toggleReadMore = () => {
+				setIsReadMore(!isReadMore);
+			};
+			return (
+				<Typography variant="body1" sx={styled.text}>
+					{isReadMore ? text?.slice(0, 455) : text}
+					<span style={{ display: 'block', cursor: 'pointer' }} onClick={toggleReadMore}>
+						{isReadMore ? t('homepage.toggleMore') : t('homepage.toggleLess')}
+					</span>
+				</Typography>
+			);
+		} else {
+			return <p></p>;
+		}
+	};
+
+	const Content1 = () => {
+		const styled = useStyles();
+		return (
+			<Box sx={styled.container}>
+				<Typography variant="body1">
+					<ReadMore1>{t('homepage.Technology.description')}</ReadMore1>
+				</Typography>
+			</Box>
+		);
+	};
+
+	const ReadMore2: FC<Props> = ({ children }) => {
+		const styled = useStyles();
+		const { t } = useTranslation();
+		if (typeof children === 'string') {
+			const text: string = children;
+			const [isReadMore, setIsReadMore] = useState(true);
+			const toggleReadMore = () => {
+				setIsReadMore(!isReadMore);
+			};
+			return (
+				<Typography variant="body1" sx={styled.text}>
+					{isReadMore ? text?.slice(0, 498) : text}
+					<span style={{ display: 'block', cursor: 'pointer' }} onClick={toggleReadMore}>
+						{isReadMore ? t('homepage.toggleMore') : t('homepage.toggleLess')}
+					</span>
+				</Typography>
+			);
+		} else {
+			return <p></p>;
+		}
+	};
+
+	const Content2 = () => {
+		const styled = useStyles();
+		return (
+			<Box sx={styled.container}>
+				<Typography variant="body1">
+					<ReadMore2>{t('homepage.Ecosystem.description')}</ReadMore2>
+				</Typography>
+			</Box>
+		);
 	};
 
 	return (
@@ -39,46 +160,255 @@ const Home: NextPage = () => {
 			</Head>
 			<Header />
 			<MediaIcons />
-			<Box sx={{ pt: 15 }}>
-				<h1 className={styles.title}>{t('homepage.title')}</h1>
-
-				<p className={styles.description}>
-					Get started by editing <code className={styles.code}>pages/index.tsx</code>
-				</p>
-
-				<div className={styles.grid}>
-					<Link href="/about">about</Link>
-					<a href="https://nextjs.org/docs" className={styles.card}>
-						<h2>pppp</h2>
-						<p>Find in-depth information about Next.js features and API.</p>
-					</a>
-
-					<a href="https://nextjs.org/learn" className={styles.card}>
-						<h2>Learn &rarr;</h2>
-						<p>Learn about Next.js in an interactive course with quizzes!</p>
-					</a>
-
-					<a href="https://github.com/vercel/next.js/tree/master/examples" className={styles.card}>
-						<h2>Examples &rarr;</h2>
-						<p>Discover and deploy boilerplate example Next.js projects.</p>
-					</a>
-
-					<a
-						href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-						className={styles.card}>
-						<h2>Deploy &rarr;</h2>
-						<p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
-					</a>
-				</div>
-			</Box>
-			<Stack direction="row" alignItems="center" justifyContent="space-around">
-				<Box textAlign="left" px={4} maxWidth={600}>
-					<Typography variant="h3">{t('homepage.Introduction.title')}</Typography>
-					<Typography paragraph>{t('homepage.Introduction.description')}</Typography>
-					<Button variant="dashed">Whitepaper</Button>
+			<Box
+				sx={{
+					backgroundImage: `url('${background.src}')`,
+					backgroundRepeat: 'no-repeat',
+					backgroundSize: '100% 100%',
+					backgroundPosition: 'center',
+					height: '100vh',
+					width: '100vw',
+					display: 'flex',
+					justifyContent: 'center',
+					alignItems: 'center',
+				}}>
+				<Box sx={{ textAlign: 'center' }}>
+					<Typography sx={{ maxWidth: '700px' }} variant="h2">
+						{t('homepage.title')}
+					</Typography>
 				</Box>
-				<Box width={500}>
+			</Box>
+			{
+				//Introduction
+			}
+			<Stack
+				sx={{
+					backgroundImage: `url('${Imagen.src}')`,
+					backgroundRepeat: 'no-repeat',
+					backgroundSize: '100% 100%',
+					backgroundPosition: 'center',
+				}}
+				display="flex"
+				flexDirection="row"
+				alignItems="center"
+				height={'100vh'}>
+				<Box sx={{ marginLeft: '20px', borderBottom: '1px solid  #424949', width: '10.3vw' }}>
+					<Typography paragraph sx={{ marginBottom: '0', fontSize: '20px' }}>
+						{t('homepage.seccion.1')}
+					</Typography>
+				</Box>
+				<Box marginLeft={'85px'} textAlign="left" px={4} maxWidth={600} top={0}>
+					<Typography variant="h3" sx={{ marginBottom: '15px' }}>
+						{t('homepage.Introduction.title')}
+					</Typography>
+					<Content></Content>
+					<Box sx={{ marginTop: '25px' }}>
+						<Typography paragraph sx={{ fontWeight: 'bold' }}>
+							{t('homepage.seccionLink')}
+						</Typography>
+						<Box sx={{ display: 'flex', marginTop: '15px' }}>
+							<Typography paragraph sx={{ fontWeight: 'lighter', marginRight: '30px' }}>
+								{t('homepage.Introduction.relatedLink.0')}
+							</Typography>
+							<Typography paragraph sx={{ fontWeight: 'lighter' }}>
+								{t('homepage.Introduction.relatedLink.1')}
+							</Typography>
+						</Box>
+						<Box sx={{ display: 'flex' }}>
+							<Typography paragraph sx={{ fontWeight: 'lighter', marginRight: '30px' }}>
+								{t('homepage.Introduction.relatedLink.2')}
+							</Typography>
+							<Typography paragraph sx={{ fontWeight: 'lighter' }}>
+								{t('homepage.Introduction.relatedLink.3')}
+							</Typography>
+						</Box>
+					</Box>
+					<Box sx={{ display: 'flex', marginTop: '10px' }}>
+						<Typography paragraph sx={{ paddingTop: '5px', marginRight: '20px' }}>
+							{t('homepage.information')}
+						</Typography>
+						<Box>
+							<Button variant="dashed">Whitepaper</Button>
+						</Box>
+					</Box>
+				</Box>
+
+				<Box width={700}>
 					<Lottie options={defaultOptions} height={500} width={500} />
+				</Box>
+				<Box sx={{ display: 'flex', alignItems: 'center', marginLeft: '50px' }}>
+					<Box sx={{ borderBottom: '1px solid  #424949', width: '10.5vw' }}></Box>
+					<Box
+						sx={{
+							display: 'flex',
+							alignItems: 'center',
+							justifyContent: 'center',
+							width: '50px',
+							height: '50px',
+							borderRadius: '50%',
+							border: '1px solid #C0C0C0',
+							opacity: '0.7',
+						}}>
+						<Typography paragraph sx={{ margin: '0' }}>
+							2
+						</Typography>
+					</Box>
+				</Box>
+			</Stack>
+			{
+				//Technology
+			}
+			<Stack
+				sx={{
+					backgroundImage: `url('${Imagen.src}')`,
+					backgroundRepeat: 'no-repeat',
+					backgroundSize: '100% 100%',
+					backgroundPosition: 'center',
+				}}
+				display="flex"
+				flexDirection="row"
+				alignItems="center"
+				height={'100vh'}>
+				<Box sx={{ marginLeft: '20px', borderBottom: '1px solid  #424949', width: '10.3vw' }}>
+					<Typography paragraph sx={{ marginBottom: '0', fontSize: '20px' }}>
+						{t('homepage.seccion.2')}
+					</Typography>
+				</Box>
+				<Box marginLeft={'85px'} textAlign="left" px={4} maxWidth={600} top={0}>
+					<Typography variant="h3" sx={{ marginBottom: '15px' }}>
+						{t('homepage.Technology.title')}
+					</Typography>
+					<Content1></Content1>
+					<Box sx={{ marginTop: '25px' }}>
+						<Typography paragraph sx={{ fontWeight: 'bold' }}>
+							{t('homepage.seccionLink')}
+						</Typography>
+						<Box sx={{ display: 'flex', marginTop: '15px' }}>
+							<Typography paragraph sx={{ fontWeight: 'lighter', marginRight: '30px' }}>
+								{t('homepage.Technology.relatedLink.0')}
+							</Typography>
+							<Typography paragraph sx={{ fontWeight: 'lighter' }}>
+								{t('homepage.Technology.relatedLink.1')}
+							</Typography>
+						</Box>
+						<Box sx={{ display: 'flex' }}>
+							<Typography paragraph sx={{ fontWeight: 'lighter', marginRight: '30px' }}>
+								{t('homepage.Technology.relatedLink.2')}
+							</Typography>
+							<Typography paragraph sx={{ fontWeight: 'lighter' }}>
+								{t('homepage.Technology.relatedLink.3')}
+							</Typography>
+						</Box>
+					</Box>
+					<Box sx={{ display: 'flex', marginTop: '10px' }}>
+						<Typography paragraph sx={{ paddingTop: '5px', marginRight: '20px' }}>
+							{t('homepage.information')}
+						</Typography>
+						<Box>
+							<Button variant="dashed">Whitepaper</Button>
+						</Box>
+					</Box>
+				</Box>
+
+				<Box width={700}>
+					<Lottie options={defaultOptions1} height={500} width={500} />
+				</Box>
+				<Box sx={{ display: 'flex', alignItems: 'center', marginLeft: '50px' }}>
+					<Box sx={{ borderBottom: '1px solid  #424949', width: '10.5vw' }}></Box>
+					<Box
+						sx={{
+							display: 'flex',
+							alignItems: 'center',
+							justifyContent: 'center',
+							width: '50px',
+							height: '50px',
+							borderRadius: '50%',
+							border: '1px solid #C0C0C0',
+							opacity: '0.7',
+						}}>
+						<Typography paragraph sx={{ margin: '0' }}>
+							3
+						</Typography>
+					</Box>
+				</Box>
+			</Stack>
+			{
+				//Ecosystem
+			}
+			<Stack
+				sx={{
+					backgroundImage: `url('${Imagen.src}')`,
+					backgroundRepeat: 'no-repeat',
+					backgroundSize: '100% 100%',
+					backgroundPosition: 'center',
+				}}
+				display="flex"
+				flexDirection="row"
+				alignItems="center"
+				height={'100vh'}>
+				<Box sx={{ marginLeft: '20px', borderBottom: '1px solid  #424949', width: '10.3vw' }}>
+					<Typography paragraph sx={{ marginBottom: '0', fontSize: '20px' }}>
+						{t('homepage.seccion.3')}
+					</Typography>
+				</Box>
+				<Box marginLeft={'85px'} textAlign="left" px={4} maxWidth={600} top={0}>
+					<Typography variant="h3" sx={{ marginBottom: '15px' }}>
+						{t('homepage.Ecosystem.title')}
+					</Typography>
+					<Content2></Content2>
+					<Box sx={{ marginTop: '25px' }}>
+						<Typography paragraph sx={{ fontWeight: 'bold' }}>
+							{t('homepage.seccionLink')}
+						</Typography>
+						<Box sx={{ display: 'flex', marginTop: '15px' }}>
+							<Typography paragraph sx={{ fontWeight: 'lighter', marginRight: '30px' }}>
+								{t('homepage.Ecosystem.relatedLink.0')}
+							</Typography>
+							<Typography paragraph sx={{ fontWeight: 'lighter' }}>
+								{t('homepage.Ecosystem.relatedLink.1')}
+							</Typography>
+						</Box>
+						<Box>
+							<Typography paragraph sx={{ fontWeight: 'lighter', marginRight: '30px' }}>
+								{t('homepage.Ecosystem.relatedLink.2')}
+							</Typography>
+						</Box>
+						<Box>
+							<Typography paragraph sx={{ fontWeight: 'lighter' }}>
+								{t('homepage.Ecosystem.relatedLink.3')}
+							</Typography>
+						</Box>
+					</Box>
+					<Box sx={{ display: 'flex', marginTop: '10px' }}>
+						<Typography paragraph sx={{ paddingTop: '5px', marginRight: '20px' }}>
+							{t('homepage.information')}
+						</Typography>
+						<Box>
+							<Button variant="dashed">Whitepaper</Button>
+						</Box>
+					</Box>
+				</Box>
+
+				<Box width={700}>
+					<Lottie options={defaultOptions2} height={600} width={600} />
+				</Box>
+				<Box sx={{ display: 'flex', alignItems: 'center', marginLeft: '50px' }}>
+					<Box sx={{ borderBottom: '1px solid  #424949', width: '10.5vw' }}></Box>
+					<Box
+						sx={{
+							display: 'flex',
+							alignItems: 'center',
+							justifyContent: 'center',
+							width: '50px',
+							height: '50px',
+							borderRadius: '50%',
+							border: '1px solid #C0C0C0',
+							opacity: '0.7',
+						}}>
+						<Typography paragraph sx={{ margin: '0' }}>
+							4
+						</Typography>
+					</Box>
 				</Box>
 			</Stack>
 			<Footer />
