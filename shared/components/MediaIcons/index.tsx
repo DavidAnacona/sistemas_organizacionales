@@ -14,36 +14,38 @@ import {
 
 const MediaIcons = () => {
 	return (
-		<Box sx={{ position: 'fixed', display: 'flex', flexDirection: 'column', right: 0, top: '90px' }}>
+		<Box
+			zIndex={7}
+			sx={{ position: 'fixed', display: 'flex', flexDirection: 'column', right: 0, top: { xs: '130px', lg: '90px' } }}>
 			<IconButton>
-				<AiFillInstagram />
+				<AiFillInstagram size={20} />
 			</IconButton>
 			<IconButton>
-				<AiFillTwitterCircle />
+				<AiFillTwitterCircle size={20} />
 			</IconButton>
 			<IconButton>
-				<AiFillFacebook />
+				<AiFillFacebook size={20} />
 			</IconButton>
 			<IconButton>
-				<AccessTimeFilledTwoTone />
+				<AccessTimeFilledTwoTone fontSize="small" />
 			</IconButton>
 			<IconButton>
-				<AiFillYoutube />
+				<AiFillYoutube size={20} />
 			</IconButton>
 			<IconButton>
-				<AiFillLinkedin />
+				<AiFillLinkedin size={20} />
 			</IconButton>
 			<IconButton>
-				<AiFillTwitterSquare />
+				<AiFillTwitterSquare size={20} />
 			</IconButton>
 			<IconButton>
-				<AiFillRedditSquare />
+				<AiFillRedditSquare size={20} />
 			</IconButton>
 			<IconButton>
-				<AiFillDatabase />
+				<AiFillDatabase size={20} />
 			</IconButton>
 			<IconButton>
-				<AiFillWindows />
+				<AiFillWindows size={20} />
 			</IconButton>
 		</Box>
 	);
