@@ -1,6 +1,6 @@
 import { Stack, Typography, Box, useMediaQuery } from '@mui/material';
 import Head from 'next/head';
-import React from 'react';
+import React, { ReactFragment } from 'react';
 import Header from 'shared/components/Header';
 import Footer from 'shared/components/Footer';
 import MediaIcons from 'shared/components/MediaIcons';
@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useStyles } from 'styles/LNDA/styled';
+import { LNDA } from 'lang/en-US/pages/LNDA';
 
 const defaultOptionsGlobal = {
 	loop: true,
@@ -26,6 +27,18 @@ const LNDAPage = () => {
 	const { t } = useTranslation();
 	const matches = useMediaQuery('(max-width:930px)');
 	const styles = useStyles();
+
+	const RoadMapCard = ({ title = 'Q1', children }: { title?: string; children?: ReactFragment | React.ReactNode }) => {
+		return (
+			<Box minWidth={['100%', 280]} maxWidth={['100%', 280]} bgcolor="#636363" borderRadius={4} pr={1} py={6} position="relative">
+				<Box sx={styles.story.cardRoadmap}>
+					<Typography variant="h6">{title}</Typography>
+				</Box>
+				<Stack textAlign="center">{children}</Stack>
+			</Box>
+		);
+	};
+
 	return (
 		<>
 			<Head>
@@ -46,7 +59,15 @@ const LNDAPage = () => {
 			</Head>
 			<Header bg="black" />
 			<MediaIcons />
-			<Stack height="100vh" py={[30, 0]} mb={[10, 0]} spacing={2} direction={['column', 'row']} px={[0, 25]} alignItems="center">
+			<Stack
+				height="100vh"
+				py={[30, 0]}
+				mb={[10, 0]}
+				spacing={2}
+				direction={['column', 'column', 'column', 'row']}
+				px={[0, 5, 25]}
+				alignItems="center"
+				justifyContent="center">
 				<Stack spacing={2} px={[4, 0]}>
 					<Typography variant="h2" fontWeight="bold">
 						{t('LNDA.introduction.title')}
@@ -98,7 +119,51 @@ const LNDAPage = () => {
 					<Image src="/2022/03/mano_abajo.png" width={1500} height={487} alt="small-circle" />
 				</Box>
 			</Stack>
-			{/* TODO falta la ultima sección */}
+			<Stack sx={styles.story.container}>
+				<Stack height="100%" sx={styles.story.overlay} justifyContent="center" alignItems="center">
+					<Box sx={styles.story.card}>
+						<Box sx={styles.story.circle}>
+							<Image src="/2022/03/circulo_pequeno.png" width={70} height={70} alt="small-circle" />
+						</Box>
+						<Box sx={styles.story.group}>
+							<Image src="/2022/03/Grupo-13.png" width={150} height={150} alt="group-13" />
+						</Box>
+						<Box sx={styles.story.visor}>
+							<Image src="/2022/03/OCF-1.png" width={250} height={150} alt="OCF" />
+						</Box>
+						<Typography variant="h4" fontWeight="bold" mb={6}>
+							LNDA Token Roadmap
+						</Typography>
+						<Stack
+							spacing={2}
+							gap="20px"
+							alignItems={['center', 'center', 'center', 'initial']}
+							justifyContent="center"
+							direction={['column', 'column', 'column', 'row']}>
+							{Object.keys(LNDA.roadmap).map((i, key) => (
+								<RoadMapCard
+									key={key}
+									title={i}
+									children={
+										<>
+											{Object.keys(LNDA.roadmap[i]).map((j) => (
+												<>
+													<Typography fontWeight="bold">{t(`LNDA.roadmap.${i}.${j}.title`)}</Typography>
+													<ul>
+														{Object.keys(LNDA.roadmap[i][j].items).map((z) => (
+															<li>{t(`LNDA.roadmap.${i}.${j}.items.${z}`)}</li>
+														))}
+													</ul>
+												</>
+											))}
+										</>
+									}
+								/>
+							))}
+						</Stack>
+					</Box>
+				</Stack>
+			</Stack>
 			<Footer />
 		</>
 	);
