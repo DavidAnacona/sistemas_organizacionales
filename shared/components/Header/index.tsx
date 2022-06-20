@@ -80,7 +80,13 @@ const Header: React.FC<IProps> = ({ bg }) => {
 							<Image width={160} height={60} src="/2022/03/logo_landian_letras_blanco.svg" />
 						</Link>
 					</Box>
-					<Stack direction="row" spacing={[1, 3]} mb={[2, 0]} alignItems="center" sx={{ fontSize: '11px' }}>
+					<Stack
+						direction="row"
+						spacing={[1, 3]}
+						mb={[2, 0]}
+						alignItems="center"
+						justifyContent="center"
+						sx={{ fontSize: '11px' }}>
 						<Link href="/">
 							<Typography>{t('navbar.options.0')}</Typography>
 						</Link>
@@ -145,18 +151,19 @@ const Header: React.FC<IProps> = ({ bg }) => {
 							</FormControl>
 						</Hidden>
 					</Stack>
-					<Stack>
-						<Hidden smUp>
+					<Hidden smUp>
+						<Stack>
 							<FormControl sx={styles.formcontrol} size="small">
 								<Select onChange={handleLocaleChange} value={router.locale}>
 									<MenuItem value="en-US">EN</MenuItem>
 									<MenuItem value="es-ES">ES</MenuItem>
 								</Select>
 							</FormControl>
-						</Hidden>
-					</Stack>
-					<Stack alignItems="center" justifyContent="center" height="100%">
+						</Stack>
+					</Hidden>
+					<Stack alignItems="center" justifyContent="center" height="100%" gap="5px">
 						<Paper sx={styles.paper}>1 Landian Token (LNDA) = $0.34</Paper>
+						<Paper sx={styles.blackpaper}>swap LNDA</Paper>
 					</Stack>
 				</Stack>
 			</Box>
