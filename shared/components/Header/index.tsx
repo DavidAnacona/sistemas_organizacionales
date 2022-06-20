@@ -115,14 +115,12 @@ const Header: React.FC<IProps> = ({ bg }) => {
 												aria-labelledby="composition-button"
 												onKeyDown={handleListKeyDown}>
 												<MenuItem>
-													<a href="https://www.landian.io/wp-content/uploads/2022/06/whitepaper-es-08062022.pdf" target="_blank">
+													<a href="/2022/05/landian-whitepaper-es-24-05-2022.pdf" target="_blank" rel="noopener noreferrer">
 														<Typography>Whitepaper</Typography>
 													</a>
 												</MenuItem>
 												<MenuItem>
-													<a
-														href="https://www.landian.io/wp-content/uploads/2022/06/landian-litepaper-es-03062022.pdf"
-														target="_blank">
+													<a href="/2022/05/landian-litepaper-en-05-2022.pdf" target="_blank" rel="noopener noreferrer">
 														<Typography>Litepaper</Typography>
 													</a>
 												</MenuItem>
