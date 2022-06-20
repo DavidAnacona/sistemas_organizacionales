@@ -74,7 +74,7 @@ const Header: React.FC<IProps> = ({ bg }) => {
 	return (
 		<header>
 			<Box position="fixed" width="100%" bgcolor={bg} zIndex={6}>
-				<Stack direction={['column', 'row']} justifyContent="space-between" sx={styles.container} alignItems="center">
+				<Stack direction={['column', 'row']} justifyContent="space-around" sx={styles.container} alignItems="center">
 					<Box ml={4}>
 						<Link href="/">
 							<Image width={160} height={60} src="/2022/03/logo_landian_letras_blanco.svg" />
