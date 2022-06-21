@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, useMediaQuery } from '@mui/material';
 import { FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -9,6 +9,7 @@ interface IProps {
 
 const ReadMore: FC<IProps> = ({ children, numberWords }) => {
 	const { t } = useTranslation();
+	const Mobil = useMediaQuery('(max-width:1000px)');
 	if (typeof children === 'string') {
 		const text: string = children;
 		const [isReadMore, setIsReadMore] = useState(true);
@@ -16,7 +17,7 @@ const ReadMore: FC<IProps> = ({ children, numberWords }) => {
 			setIsReadMore(!isReadMore);
 		};
 		return (
-			<Typography sx={{ fontSize: '13px' }}>
+			<Typography fontSize={[11, 13, 16]}>
 				<pre>
 					{isReadMore ? text?.slice(0, numberWords) : text}
 					<span style={{ display: 'block', cursor: 'pointer' }} onClick={toggleReadMore}>
@@ -36,6 +37,7 @@ interface PropsContent {
 }
 export const Content: FC<PropsContent> = ({ seccion, numberWords }) => {
 	const { t } = useTranslation();
+
 	return (
 		<Box>
 			<Typography variant="body1">

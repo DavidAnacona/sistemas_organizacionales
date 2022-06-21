@@ -2,7 +2,16 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { useTranslation } from 'react-i18next';
-import { Box, Typography, Stack, Button, AutocompleteFreeSoloValueMapping, TextField, Checkbox } from '@mui/material';
+import {
+	Box,
+	Typography,
+	Stack,
+	Button,
+	AutocompleteFreeSoloValueMapping,
+	TextField,
+	Checkbox,
+	useMediaQuery,
+} from '@mui/material';
 import Header from 'shared/components/Header';
 import MediaIcons from 'shared/components/MediaIcons';
 import Footer from 'shared/components/Footer';
@@ -35,6 +44,10 @@ const defaultOptionsGlobal = {
 const Home: NextPage = () => {
 	const { t } = useTranslation();
 	// ? animation
+
+	const matches = useMediaQuery('(max-width:1700px)');
+	const matches2 = useMediaQuery('(max-width:1250px)');
+	const Mobil = useMediaQuery('(max-width:1000px)');
 
 	const stylesGeneral = useStyles();
 
@@ -90,6 +103,9 @@ const Home: NextPage = () => {
 			},
 		},
 	};
+	console.log('1700 ' + matches);
+	console.log('1250 ' + matches2);
+	console.log('1000 ' + Mobil);
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -138,20 +154,21 @@ const Home: NextPage = () => {
 					backgroundPosition: 'center',
 				}}
 				display="flex"
-				flexDirection="row"
+				flexDirection={Mobil ? 'column-reverse' : 'row'}
 				alignItems="center"
+				justifyContent="space-between"
 				height={'100vh'}>
-				<Box sx={{ marginLeft: '20px', borderBottom: '1px solid  #424949', width: '10.3vw' }}>
+				<Box display={matches2 ? 'none' : ''} sx={{ marginLeft: '20px', borderBottom: '1px solid  #424949', width: '10.3vw' }}>
 					<Typography paragraph sx={{ marginBottom: '0', fontSize: '20px' }}>
 						{t('homepage.seccion.1')}
 					</Typography>
 				</Box>
-				<Box marginLeft={'85px'} textAlign="left" px={4} maxWidth={600} top={0}>
+				<Box textAlign="left" px={4} maxWidth={600} top={0}>
 					<Typography variant="h3" sx={{ marginBottom: '15px' }}>
 						{t('homepage.Introduction.title')}
 					</Typography>
 					<Content seccion="Introduction" numberWords={496}></Content>
-					<Box sx={{ marginTop: '25px' }}>
+					<Box sx={{ marginTop: '25px' }} fontSize={matches ? '10' : '16'}>
 						<Typography paragraph sx={{ fontWeight: 'bold' }}>
 							{t('homepage.seccionLink')}
 						</Typography>
@@ -182,11 +199,11 @@ const Home: NextPage = () => {
 					</Box>
 				</Box>
 
-				<Box width={700}>
-					<Lottie options={AnimationIntroduction} height={500} width={500} />
+				<Box width={[200, 350, 600]}>
+					<Lottie options={AnimationIntroduction} height={200} width={200} />
 				</Box>
-				<Box sx={{ display: 'flex', alignItems: 'center', marginLeft: '50px' }}>
-					<Box sx={{ borderBottom: '1px solid  #424949', width: '10.5vw' }}></Box>
+				<Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+					<Box width={['100vw', '10.5vw']} sx={{ borderBottom: '1px solid  #424949' }}></Box>
 					<Box
 						sx={{
 							display: 'flex',
@@ -509,7 +526,7 @@ const Home: NextPage = () => {
 				<Box width={700}>
 					<Lottie options={AnimationConnection} height={600} width={600} />
 				</Box>
-				<Box sx={{ display: 'flex', alignItems: 'center', marginLeft: '50px' }}>
+				<Box sx={{ display: 'flex', alignItems: 'center', marginLeft: '30px' }}>
 					<Box sx={{ borderBottom: '1px solid  #424949', width: '10.5vw' }}></Box>
 					<Box
 						sx={{
@@ -765,8 +782,8 @@ const Home: NextPage = () => {
 					</Box>
 				</Box>
 
-				<Box width={700}>
-					<Lottie options={AnimationLnda} height={700} width={700} />
+				<Box width={600}>
+					<Lottie options={AnimationLnda} height={600} width={600} />
 				</Box>
 				<Box sx={{ display: 'flex', alignItems: 'center' }}>
 					<Box sx={{ borderBottom: '1px solid  #424949', width: '10.5vw' }}></Box>
