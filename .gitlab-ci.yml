@@ -1,0 +1,49 @@
+#CI/CD templates
+variables:
+  DOCKER_HOST: tcp://docker:2375
+  APP_NAME: landian-page
+docker-build-master:
+  # Use the official docker image.
+  image: 
+    name: amazon/aws-cli
+    entrypoint: [""]
+  stage: build
+  services:
+    - docker:dind
+  before_script:
+    - amazon-linux-extras install docker
+    - aws --version
+    - docker --version
+    - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $AWS_CR_APP
+  script:
+    #- |
+    #  if [[ "$CI_COMMIT_BRANCH" == "$CI_DEFAULT_BRANCH" ]]; then
+    #    tag=""
+    #    echo "Running on default branch '$CI_DEFAULT_BRANCH': tag = 'latest'"
+    #  else
+    #    tag=":$CI_COMMIT_REF_SLUG"
+    #    # $CI_PIPELINE_IID
+    #    echo "Running on branch '$CI_COMMIT_BRANCH': tag = $tag"
+    #  fi
+    #- docker build --pull -t "$CI_REGISTRY_IMAGE${tag}" .
+    #- docker push "$CI_REGISTRY_IMAGE${tag}"
+    #- echo $CI_COMMIT_SHA
+    #- echo $CI_COMMIT_SHORT_SHA
+    #- echo $CI_CONCURRENT_ID
+    #- echo $CI_COMMIT_REF_SLUG
+    #- echo $CI_PIPELINE_ID
+    #- echo $CI_PIPELINE_IID
+    #- cp .env.example .env
+    - docker build -t $APP_NAME .
+    - docker tag $APP_NAME:latest $AWS_CR_APP/$APP_NAME:latest
+    - docker tag $APP_NAME:latest $AWS_CR_APP/$APP_NAME:$CI_PIPELINE_IID
+    #ELIMINAR EL ACTUAL LATEST
+    #- aws ecr batch-delete-image --repository-name $APP_NAME --image-ids imageTag=latest --region $AWS_DEFAULT_REGION
+    #SUBIR IMAG
+    - docker push $AWS_CR_APP/$APP_NAME:latest
+    - docker push $AWS_CR_APP/$APP_NAME:$CI_PIPELINE_IID
+
+  # Run this job in a branch where a Dockerfile exists
+  only:
+    - master
+    - main
