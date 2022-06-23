@@ -1,16 +1,8 @@
-import { AccessTimeFilledTwoTone } from '@mui/icons-material';
 import { Box, IconButton } from '@mui/material';
-import {
-	AiFillDatabase,
-	AiFillFacebook,
-	AiFillInstagram,
-	AiFillLinkedin,
-	AiFillRedditSquare,
-	AiFillTwitterCircle,
-	AiFillTwitterSquare,
-	AiFillWindows,
-	AiFillYoutube,
-} from 'react-icons/ai';
+import { AiFillYoutube, AiOutlineTwitter } from 'react-icons/ai';
+import { FiInstagram } from 'react-icons/fi';
+import { FaFacebookF, FaLinkedinIn, FaTiktok, FaTwitch, FaRedditAlien, FaTelegramPlane } from 'react-icons/fa';
+import { IoLogoDiscord } from 'react-icons/io5';
 
 const MediaIcons = () => {
 	return (
@@ -18,34 +10,34 @@ const MediaIcons = () => {
 			zIndex={7}
 			sx={{ position: 'fixed', display: 'flex', flexDirection: 'column', right: 0, top: { xs: '130px', lg: '90px' } }}>
 			<IconButton>
-				<AiFillInstagram size={20} />
+				<FiInstagram size={17} />
 			</IconButton>
 			<IconButton>
-				<AiFillTwitterCircle size={20} />
+				<AiOutlineTwitter size={17} />
 			</IconButton>
 			<IconButton>
-				<AiFillFacebook size={20} />
+				<FaFacebookF size={17} />
 			</IconButton>
 			<IconButton>
-				<AccessTimeFilledTwoTone fontSize="small" />
+				<FaTiktok size={17} />
 			</IconButton>
 			<IconButton>
-				<AiFillYoutube size={20} />
+				<AiFillYoutube size={17} />
 			</IconButton>
 			<IconButton>
-				<AiFillLinkedin size={20} />
+				<FaLinkedinIn size={17} />
 			</IconButton>
 			<IconButton>
-				<AiFillTwitterSquare size={20} />
+				<FaTwitch size={17} />
 			</IconButton>
 			<IconButton>
-				<AiFillRedditSquare size={20} />
+				<FaRedditAlien size={17} />
 			</IconButton>
 			<IconButton>
-				<AiFillDatabase size={20} />
+				<IoLogoDiscord size={17} />
 			</IconButton>
 			<IconButton>
-				<AiFillWindows size={20} />
+				<FaTelegramPlane size={17} />
 			</IconButton>
 		</Box>
 	);
