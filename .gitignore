@@ -38,3 +38,11 @@ yarn-error.log*
 
 #yarn
 yarn.lock
+
+
+# .vscode
+.vscode
+
+#CI/CD
+.gitlab-ci.yml
+gitlab-ci.yml
