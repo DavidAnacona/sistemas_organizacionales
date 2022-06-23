@@ -74,13 +74,23 @@ const Header: React.FC<IProps> = ({ bg }) => {
 	return (
 		<header>
 			<Box position="fixed" width="100%" bgcolor={bg} zIndex={6}>
-				<Stack direction={['column', 'row']} justifyContent="space-between" sx={styles.container} alignItems="center">
+				<Stack
+					direction={['column', 'column', 'column', 'row']}
+					justifyContent="space-around"
+					sx={styles.container}
+					alignItems="center">
 					<Box ml={4}>
 						<Link href="/">
 							<Image width={160} height={60} src="/2022/03/logo_landian_letras_blanco.svg" />
 						</Link>
 					</Box>
-					<Stack direction="row" spacing={[1, 3]} mb={[2, 0]} alignItems="center" sx={{ fontSize: '11px' }}>
+					<Stack
+						direction="row"
+						spacing={[1, 3]}
+						mb={[2, 0]}
+						alignItems="center"
+						justifyContent="center"
+						sx={{ fontSize: '11px' }}>
 						<Link href="/">
 							<Typography>{t('navbar.options.0')}</Typography>
 						</Link>
@@ -115,14 +125,12 @@ const Header: React.FC<IProps> = ({ bg }) => {
 												aria-labelledby="composition-button"
 												onKeyDown={handleListKeyDown}>
 												<MenuItem>
-													<a href="https://www.landian.io/wp-content/uploads/2022/06/whitepaper-es-08062022.pdf" target="_blank">
+													<a href="/2022/05/landian-whitepaper-es-24-05-2022.pdf" target="_blank" rel="noopener noreferrer">
 														<Typography>Whitepaper</Typography>
 													</a>
 												</MenuItem>
 												<MenuItem>
-													<a
-														href="https://www.landian.io/wp-content/uploads/2022/06/landian-litepaper-es-03062022.pdf"
-														target="_blank">
+													<a href="/2022/05/landian-litepaper-en-05-2022.pdf" target="_blank" rel="noopener noreferrer">
 														<Typography>Litepaper</Typography>
 													</a>
 												</MenuItem>
@@ -138,6 +146,7 @@ const Header: React.FC<IProps> = ({ bg }) => {
 						<Link href="/contact">
 							<Typography>{t('navbar.options.5')}</Typography>
 						</Link>
+
 						<Hidden smDown>
 							<FormControl sx={styles.formcontrol} size="small">
 								<Select onChange={handleLocaleChange} value={router.locale}>
@@ -147,18 +156,19 @@ const Header: React.FC<IProps> = ({ bg }) => {
 							</FormControl>
 						</Hidden>
 					</Stack>
-					<Stack>
-						<Hidden smUp>
+					<Hidden smUp>
+						<Stack>
 							<FormControl sx={styles.formcontrol} size="small">
 								<Select onChange={handleLocaleChange} value={router.locale}>
 									<MenuItem value="en-US">EN</MenuItem>
 									<MenuItem value="es-ES">ES</MenuItem>
 								</Select>
 							</FormControl>
-						</Hidden>
-					</Stack>
-					<Stack alignItems="center" justifyContent="center" height="100%">
+						</Stack>
+					</Hidden>
+					<Stack direction={{ xs: 'row', lg: 'column' }} alignItems="center" justifyContent="center" height="100%" gap="5px">
 						<Paper sx={styles.paper}>1 Landian Token (LNDA) = $0.34</Paper>
+						<Paper sx={styles.blackpaper}>swap LNDA</Paper>
 					</Stack>
 				</Stack>
 			</Box>

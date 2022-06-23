@@ -49,7 +49,8 @@ export const useStyles = () => ({
 			border: '4px solid white',
 			backgroundColor: '#000000A1',
 			p: {
-				xs: 10,
+				xs: 3,
+				lg: 10,
 			},
 			textAlign: 'center',
 			position: 'relative',

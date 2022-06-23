@@ -1,4 +1,4 @@
-import { Stack, Typography, Box, useMediaQuery } from '@mui/material';
+import { Stack, Typography, Box, useMediaQuery, Grow, Slide } from '@mui/material';
 import Head from 'next/head';
 import React, { ReactFragment } from 'react';
 import Header from 'shared/components/Header';
@@ -61,7 +61,7 @@ const LNDAPage = () => {
 			<MediaIcons />
 			<Stack
 				height="100vh"
-				py={[30, 0]}
+				pt={[40, 0]}
 				mb={[10, 0]}
 				spacing={2}
 				direction={['column', 'column', 'column', 'row']}
@@ -122,15 +122,21 @@ const LNDAPage = () => {
 			<Stack sx={styles.story.container}>
 				<Stack height="100%" sx={styles.story.overlay} justifyContent="center" alignItems="center">
 					<Box sx={styles.story.card}>
-						<Box sx={styles.story.circle}>
-							<Image src="/2022/03/circulo_pequeno.png" width={70} height={70} alt="small-circle" />
-						</Box>
-						<Box sx={styles.story.group}>
-							<Image src="/2022/03/Grupo-13.png" width={150} height={150} alt="group-13" />
-						</Box>
-						<Box sx={styles.story.visor}>
-							<Image src="/2022/03/OCF-1.png" width={250} height={150} alt="OCF" />
-						</Box>
+						<Grow in={true} style={{ transformOrigin: '0 0 0' }} {...(true ? { timeout: 1000 } : {})}>
+							<Box sx={styles.story.circle}>
+								<Image src="/2022/03/circulo_pequeno.png" width={70} height={70} alt="small-circle" />
+							</Box>
+						</Grow>
+						<Grow in={true} style={{ transformOrigin: '0 0 0' }} {...(true ? { timeout: 1000 } : {})}>
+							<Box sx={styles.story.group}>
+								<Image src="/2022/03/Grupo-13.png" width={150} height={150} alt="group-13" />
+							</Box>
+						</Grow>
+						<Slide direction="up" in={true} mountOnEnter unmountOnExit>
+							<Box sx={styles.story.visor}>
+								<Image src="/2022/03/OCF-1.png" width={250} height={150} alt="OCF" />
+							</Box>
+						</Slide>
 						<Typography variant="h4" fontWeight="bold" mb={6}>
 							LNDA Token Roadmap
 						</Typography>

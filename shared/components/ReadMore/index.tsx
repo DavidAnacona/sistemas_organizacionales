@@ -17,8 +17,8 @@ const ReadMore: FC<IProps> = ({ children, numberWords }) => {
 			setIsReadMore(!isReadMore);
 		};
 		return (
-			<Typography fontSize={[11, 13, 16]}>
-				<pre>
+			<Typography fontSize={{ xs: '10px', md: '13px' }}>
+				<pre style={{ textAlign: 'left' }}>
 					{isReadMore ? text?.slice(0, numberWords) : text}
 					<span style={{ display: 'block', cursor: 'pointer' }} onClick={toggleReadMore}>
 						{isReadMore ? t('homepage.toggleMore') : t('homepage.toggleLess')}
@@ -37,7 +37,6 @@ interface PropsContent {
 }
 export const Content: FC<PropsContent> = ({ seccion, numberWords }) => {
 	const { t } = useTranslation();
-
 	return (
 		<Box>
 			<Typography variant="body1">
