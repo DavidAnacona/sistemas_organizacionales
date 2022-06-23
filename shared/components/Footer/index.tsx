@@ -4,7 +4,7 @@ import Image from 'next/image';
 const Footer = () => {
 	return (
 		<Box width="100%" sx={{ background: 'black' }}>
-			<Stack direction="row" justifyContent="space-between" alignItems="center" sx={{ padding: '30px 10px' }}>
+			<Stack direction="row" justifyContent="space-between" alignItems="center" px={[2, 40]} py="30px">
 				<Box ml={4}>
 					<Image width={160} height={60} src="/2022/03/logo_landian_letras_blanco.svg" />
 				</Box>
