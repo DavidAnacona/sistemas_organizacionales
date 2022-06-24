@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.12.1",
     "@emotion/cache": "^11.7.1",
     "@emotion/react": "^11.9.0",
     "@emotion/server": "^11.4.0",
@@ -15,6 +16,7 @@
     "@fontsource/roboto": "^4.5.1",
     "@mui/icons-material": "^5.6.2",
     "@mui/material": "^5.7.0",
+    "contentful": "^9.1.32",
     "i18n-next": "^0.0.4",
     "i18next": "^21.8.8",
     "next": "^12.1.6",
