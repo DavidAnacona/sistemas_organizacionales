@@ -121,7 +121,7 @@ const Home: NextPage = () => {
 					backgroundImage: `url('${backgroundMain.src}')`,
 					backgroundRepeat: 'no-repeat',
 					backgroundSize: '100% 100%',
-					backgroundPosition: 'center',
+					// backgroundPosition: 'center',
 				}}>
 				<Box
 					sx={{
@@ -132,7 +132,7 @@ const Home: NextPage = () => {
 						alignItems: 'center',
 					}}>
 					<Box sx={{ textAlign: 'center' }}>
-						<Typography sx={{ maxWidth: '700px' }} variant="h2">
+						<Typography sx={{ maxWidth: '700px' }} fontSize={{ xs: '2em', lg: '4em' }}>
 							{t('homepage.title')}
 						</Typography>
 					</Box>
@@ -157,7 +157,7 @@ const Home: NextPage = () => {
 						{t('homepage.seccion.3')}
 					</Typography>
 				</Box>
-				<Hidden mdDown>
+				<Hidden lgDown>
 					<Box sx={stylesGeneral.seccion.containerAnimation}>
 						<Lottie options={AnimationEcosystem} height={400} width={400} />
 					</Box>
@@ -197,7 +197,7 @@ const Home: NextPage = () => {
 						</Box>
 					</Box>
 				</Box>
-				<Hidden mdUp>
+				<Hidden lgUp>
 					<Box sx={stylesGeneral.seccion.containerAnimation}>
 						<Lottie options={AnimationEcosystem} height={400} width={400} />
 					</Box>

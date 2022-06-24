@@ -166,7 +166,14 @@ const Header: React.FC<IProps> = ({ bg }) => {
 							</FormControl>
 						</Stack>
 					</Hidden>
-					<Stack direction={{ xs: 'row', lg: 'column' }} alignItems="center" justifyContent="center" height="100%" gap="5px">
+					<Stack
+						direction={{ xs: 'row', lg: 'column' }}
+						alignItems="center"
+						justifyContent="center"
+						height="100%"
+						gap="5px"
+						width={{ xs: 'auto', md: '50%', lg: 'auto' }}
+						mt={{ xs: 2, lg: 0 }}>
 						<Paper sx={styles.paper}>1 Landian Token (LNDA) = $0.34</Paper>
 						<Paper sx={styles.blackpaper}>swap LNDA</Paper>
 					</Stack>

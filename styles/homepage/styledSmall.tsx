@@ -8,9 +8,9 @@ export const useStyles = () => ({
 			backgroundSize: '100% 100%',
 			backgroundPosition: 'center',
 			display: 'flex',
-			flexDirection: { xs: '', md: 'row-reverse' },
+			flexDirection: { md: '', lg: 'row-reverse' },
 			justifyContent: { xs: 'center', md: 'space-between' },
-			height: '100vh',
+			height: { md: '', lg: '100vh' },
 		},
 		separationSeccion: {
 			display: 'flex',
@@ -21,7 +21,7 @@ export const useStyles = () => ({
 		},
 		containerNumber: {
 			borderBottom: '1px solid  #424949',
-			width: { xs: '100vw', md: '10.5vw' },
+			width: { xs: '100%', lg: '10.5vw' },
 			display: 'flex',
 			justifyContent: 'center',
 		},
