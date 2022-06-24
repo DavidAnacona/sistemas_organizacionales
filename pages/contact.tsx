@@ -43,7 +43,7 @@ const ContactPage = () => {
 			</Head>
 			<Header bg="black" />
 			<MediaIcons />
-			<Stack sx={stylesLDNA.token.container} height="100vh">
+			<Stack sx={stylesLDNA.token.container} height={{ xs: '100%', lg: '100vh' }}>
 				<Stack height="100%" sx={stylesLDNA.token.overlay} justifyContent="center" alignItems="center">
 					<Box sx={{ ...stylesLDNA.token.card, minWidth: { md: '500px' }, mt: { xs: 20 } }}>
 						<Box sx={stylesLDNA.token.circle}>

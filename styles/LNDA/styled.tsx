@@ -10,7 +10,8 @@ export const useStyles = () => ({
 			backgroundRepeat: 'no-repeat',
 			backgroundSize: '60% auto',
 			py: {
-				xs: 10,
+				xs: 30,
+				lg: 10
 			},
 		},
 		overlay: { backdropFilter: 'blur(7px)' },

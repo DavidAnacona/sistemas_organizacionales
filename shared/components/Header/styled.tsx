@@ -7,6 +7,7 @@ export const useStyles = () => ({
 		padding: '5px 15px',
 		borderRadius: '10px',
 		cursor: 'pointer',
+		width: '100%',
 		// marginTop: '-25px',
 		// marginRight: '10px',
 	},

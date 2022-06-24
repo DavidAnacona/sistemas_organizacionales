@@ -74,7 +74,11 @@ const Header: React.FC<IProps> = ({ bg }) => {
 	return (
 		<header>
 			<Box position="fixed" width="100%" bgcolor={bg} zIndex={6}>
-				<Stack direction={['column', 'row']} justifyContent="space-around" sx={styles.container} alignItems="center">
+				<Stack
+					direction={['column', 'column', 'column', 'row']}
+					justifyContent="space-around"
+					sx={styles.container}
+					alignItems="center">
 					<Box ml={4}>
 						<Link href="/">
 							<Image width={160} height={60} src="/2022/03/logo_landian_letras_blanco.svg" />
@@ -142,6 +146,7 @@ const Header: React.FC<IProps> = ({ bg }) => {
 						<Link href="/contact">
 							<Typography>{t('navbar.options.5')}</Typography>
 						</Link>
+
 						<Hidden smDown>
 							<FormControl sx={styles.formcontrol} size="small">
 								<Select onChange={handleLocaleChange} value={router.locale}>
@@ -161,7 +166,14 @@ const Header: React.FC<IProps> = ({ bg }) => {
 							</FormControl>
 						</Stack>
 					</Hidden>
-					<Stack alignItems="center" justifyContent="center" height="100%" gap="5px">
+					<Stack
+						direction={{ xs: 'row', lg: 'column' }}
+						alignItems="center"
+						justifyContent="center"
+						height="100%"
+						gap="5px"
+						width={{ xs: 'auto', md: '50%', lg: 'auto' }}
+						mt={{ xs: 2, lg: 0 }}>
 						<Paper sx={styles.paper}>1 Landian Token (LNDA) = $0.34</Paper>
 						<Paper sx={styles.blackpaper}>swap LNDA</Paper>
 					</Stack>
