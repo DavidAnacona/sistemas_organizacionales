@@ -8,8 +8,8 @@ interface IProps {
 }
 
 const ReadMore: FC<IProps> = ({ children, numberWords }) => {
+	const matches = useMediaQuery('(max-width:899px)');
 	const { t } = useTranslation();
-	const Mobil = useMediaQuery('(max-width:1000px)');
 	if (typeof children === 'string') {
 		const text: string = children;
 		const [isReadMore, setIsReadMore] = useState(true);
@@ -17,8 +17,10 @@ const ReadMore: FC<IProps> = ({ children, numberWords }) => {
 			setIsReadMore(!isReadMore);
 		};
 		return (
-			<Typography fontSize={{ xs: '10px', md: '13px' }}>
-				<pre style={{ textAlign: 'left' }}>
+			<Typography
+				fontSize={{ xs: '10.5px', md: '13px', lg: '15px' }}
+				sx={{ textAlign: { xs: 'center', md: 'left', lg: 'left' } }}>
+				<pre style={{ textAlign: matches ? 'center' : 'left' }}>
 					{isReadMore ? text?.slice(0, numberWords) : text}
 					<span style={{ display: 'block', cursor: 'pointer' }} onClick={toggleReadMore}>
 						{isReadMore ? t('homepage.toggleMore') : t('homepage.toggleLess')}
