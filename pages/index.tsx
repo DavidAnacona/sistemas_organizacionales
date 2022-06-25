@@ -124,7 +124,7 @@ const Home: NextPage = () => {
 					backgroundImage: `url('${backgroundMain.src}')`,
 					backgroundRepeat: 'no-repeat',
 					backgroundSize: '100% 100%',
-					backgroundPosition: 'center',
+					// backgroundPosition: 'center',
 				}}>
 				<Box
 					sx={{
@@ -135,7 +135,7 @@ const Home: NextPage = () => {
 						alignItems: 'center',
 					}}>
 					<Box sx={{ textAlign: 'center' }}>
-						<Typography sx={{ maxWidth: '700px' }} variant="h2">
+						<Typography sx={{ maxWidth: '700px' }} fontSize={{ xs: '2em', lg: '4em' }}>
 							{t('homepage.title')}
 						</Typography>
 					</Box>
