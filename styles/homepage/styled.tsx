@@ -10,7 +10,7 @@ export const useStyles = () => ({
 			display: 'flex',
 			flexDirection: { xs: '', md: 'row-reverse' },
 			justifyContent: { xs: 'center', md: 'space-between' },
-			height: '100vh',
+			height: { xs: 'auto', lg: '100vh' },
 		},
 		separationSeccion: {
 			display: 'flex',
