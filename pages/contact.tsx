@@ -6,9 +6,11 @@ import Footer from 'shared/components/Footer';
 import MediaIcons from 'shared/components/MediaIcons';
 import Image from 'next/image';
 import { useStyles } from 'styles/LNDA/styled';
+import { useTranslation } from 'react-i18next';
 
 const ContactPage = () => {
 	const stylesLDNA = useStyles();
+	const { t } = useTranslation();
 
 	const classes = {
 		input: {
@@ -53,14 +55,21 @@ const ContactPage = () => {
 							<Image src="/2022/03/Grupo-13.png" width={110} height={110} alt="group-13" />
 						</Box>
 						<Typography variant="h4" fontWeight="bold" mb={2}>
-							Contacto
+							{t('contact.title')}
 						</Typography>
 						<Stack justifyContent="center" alignItems="center" spacing={2}>
-							<TextField variant="outlined" size="small" placeholder="Nombre" sx={classes.input} />
-							<TextField variant="outlined" size="small" placeholder="Correo" type="email" sx={classes.input} />
-							<TextField multiline rows={6} variant="outlined" size="small" placeholder="Escribe un mensaje" sx={classes.input} />
+							<TextField variant="outlined" size="small" placeholder={t('contact.fields.0')} sx={classes.input} />
+							<TextField variant="outlined" size="small" placeholder={t('contact.fields.1')} type="email" sx={classes.input} />
+							<TextField
+								multiline
+								rows={6}
+								variant="outlined"
+								size="small"
+								placeholder={t('contact.fields.2')}
+								sx={classes.input}
+							/>
 							<Button variant="dashed" sx={{ width: 'fit-content' }}>
-								Enviar
+								{t('contact.submit')}
 							</Button>
 						</Stack>
 					</Box>

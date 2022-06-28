@@ -99,7 +99,7 @@ export const useStyles = () => ({
 			display: 'flex',
 			flexDirection: 'row',
 			flexWrap: 'wrap',
-			maxWidth: { md: '500px', lg: '650px' },
+			maxWidth: { md: '500px', lg: '700px' },
 			justifyContent: { xs: 'center', md: 'left', lg: 'left' },
 		},
 		containerTeam: {
@@ -108,7 +108,6 @@ export const useStyles = () => ({
 			justifyContent: 'center',
 			flexDirection: 'column',
 			width: { xs: '90px', md: '110px', lg: '130px' },
-			height: 'auto',
 			marginRight: '25px',
 		},
 		containerImage: {

@@ -97,7 +97,6 @@ const Home: NextPage = () => {
 		},
 	};
 
-	const sizeTeam: number[] = [70, 100, 130];
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -192,7 +191,10 @@ const Home: NextPage = () => {
 								{t('homepage.information')}
 							</Typography>
 							<Box>
-								<Button variant="dashed">Whitepaper</Button>
+								<Button variant="dashed">
+									Whitepaper
+									<HiDownload style={{ paddingLeft: '5px' }} size={17} />
+								</Button>
 							</Box>
 						</Box>
 					</Box>
@@ -259,7 +261,10 @@ const Home: NextPage = () => {
 								{t('homepage.information')}
 							</Typography>
 							<Box>
-								<Button variant="dashed">Whitepaper</Button>
+								<Button variant="dashed">
+									Whitepaper
+									<HiDownload style={{ paddingLeft: '5px' }} size={17} />
+								</Button>
 							</Box>
 						</Box>
 					</Box>
@@ -326,7 +331,10 @@ const Home: NextPage = () => {
 								{t('homepage.information')}
 							</Typography>
 							<Box>
-								<Button variant="dashed">Whitepaper</Button>
+								<Button variant="dashed">
+									Whitepaper
+									<HiDownload style={{ paddingLeft: '5px' }} size={17} />
+								</Button>
 							</Box>
 						</Box>
 					</Box>
@@ -398,7 +406,7 @@ const Home: NextPage = () => {
 							</Typography>
 						</Stack>
 					</Stack>
-					<Content seccion="Economics" numberWords={505}></Content>
+					<Content seccion="Economics" numberWords={332}></Content>
 					<Box sx={{ marginTop: '25px' }}>
 						<Box sx={stylesGeneral.seccion.containerInformation}>
 							<Typography paragraph sx={stylesGeneral.seccion.information}>
@@ -448,7 +456,7 @@ const Home: NextPage = () => {
 					<Typography variant="h3" sx={stylesGeneral.seccion.titleSeccion}>
 						{t('homepage.Connection.title')}
 					</Typography>
-					<Content seccion="Connection" numberWords={505}></Content>
+					<Content seccion="Connection" numberWords={300}></Content>
 					<Box sx={{ marginTop: '25px' }}>
 						<Typography paragraph sx={{ fontWeight: 'bold' }}>
 							{t('homepage.seccionLink')}
@@ -474,7 +482,10 @@ const Home: NextPage = () => {
 								{t('homepage.information')}
 							</Typography>
 							<Box>
-								<Button variant="dashed">Whitepaper</Button>
+								<Button variant="dashed">
+									Whitepaper
+									<HiDownload style={{ paddingLeft: '5px' }} size={17} />
+								</Button>
 							</Box>
 						</Box>
 					</Box>
@@ -542,7 +553,10 @@ const Home: NextPage = () => {
 								{t('homepage.information')}
 							</Typography>
 							<Box>
-								<Button variant="dashed">Whitepaper</Button>
+								<Button variant="dashed">
+									Whitepaper
+									<HiDownload style={{ paddingLeft: '5px' }} size={17} />
+								</Button>
 							</Box>
 						</Box>
 					</Box>
@@ -578,7 +592,7 @@ const Home: NextPage = () => {
 					</Box>
 				</Hidden>
 				<Box
-					textAlign={{ xs: 'center', md: 'left' }}
+					textAlign={{ xs: 'center', md: 'left', lg: 'left' }}
 					px={4}
 					top={0}
 					sx={{
@@ -689,7 +703,10 @@ const Home: NextPage = () => {
 								{t('homepage.information')}
 							</Typography>
 							<Box>
-								<Button variant="dashed">Whitepaper</Button>
+								<Button variant="dashed">
+									Whitepaper
+									<HiDownload style={{ paddingLeft: '5px' }} size={17} />
+								</Button>
 							</Box>
 						</Box>
 					</Box>
