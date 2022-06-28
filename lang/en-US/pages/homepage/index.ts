@@ -3,6 +3,7 @@ export const homepage = {
 	toggleMore: '... Read more',
 	toggleLess: 'Read less ...',
 	information: 'Learn more in our',
+	shortInformation: 'Learn more',
 	seccionLink: 'Related links:',
 	seccion: {
 		1: 'Introduction',
@@ -158,9 +159,6 @@ Metaverse. It can be used to purchase land and digital assets.`,
 		contract: 'LNDA contract: 0x5f841172399c5f94b1f8390bb361890fe0ca1857',
 	},
 	Suscribe: {
-		title: 'Join our whitelist',
-		fields: ['Name *', 'Email address *', 'Discord ID', 'Phone number'],
-		check: 'I want to receive email updates from Landian',
-		submit: 'Join',
+		title: 'To join our Whitelist, check our twitter and follow the instructions',
 	},
 };

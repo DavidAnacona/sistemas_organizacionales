@@ -5,6 +5,7 @@ export const homepage = {
 	toggleMore: '... Leer más',
 	toggleLess: 'Leer menos ...',
 	information: 'Más información en nuestro',
+	shortInformation: 'Más información',
 	seccionLink: 'Enlaces relacionados:',
 	seccion: {
 		1: 'Introducción',
@@ -192,9 +193,6 @@ utilizar para comprar tierras y activos digitales.`,
 		contract: 'Contrato LNDA: 0x5f841172399c5f94b1f8390bb361890fe0ca1857',
 	},
 	Suscribe: {
-		title: 'Únete a nuestro whitelist',
-		fields: ['Nombre *', 'Correo *', 'Id de Discord', 'Número de teléfono'],
-		check: 'Quiero recibir actualizaciones de Landian por correo',
-		submit: 'Únete',
+		title: 'Para unirte a nuestro Whitelist, consulta nuestro twitter y sigue las instrucciones',
 	},
 };
