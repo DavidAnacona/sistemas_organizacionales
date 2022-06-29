@@ -1,6 +1,7 @@
 import { Typography, Container, Paper, Stack, Divider, Button } from '@mui/material';
 import { createClient } from 'contentful';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 import Footer from 'shared/components/Footer';
 import Header from 'shared/components/Header';
 import MediaIcons from 'shared/components/MediaIcons';
@@ -17,13 +18,14 @@ export async function getStaticProps() {
 }
 
 const NewsPage = ({ news }: any) => {
+	const { t } = useTranslation();
 	return (
 		<>
 			<Header bg="black" />
 			<MediaIcons />
-			<Container sx={{ pt: { xs: 40, lg: 30 }, pb: 30, flex: 1 }}>
-				<Typography fontWeight="bold" textAlign="center" variant="h4">
-					News
+			<Container sx={{ pt: { xs: 40, lg: 20 }, pb: 30, flex: 1 }}>
+				<Typography fontWeight="bold" textAlign="center" variant="h2" marginBottom={10}>
+					{t('navbar.options.2')}
 				</Typography>
 				<Stack display="flex" direction="row" flexWrap="wrap" mt={3} gap={5}>
 					{news?.map((i: any, index: any) => (
