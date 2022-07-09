@@ -42,9 +42,22 @@ const NewsPage = ({ news }: any) => {
 									</Link>
 								</Stack>
 								<Divider sx={{ borderColor: '#adadad' }} />
-								<Stack direction="row" justifyContent="center" alignItems="center" spacing={2} sx={{ color: '#adadad' }} pt={1}>
-									<Typography>{i?.fields?.publishDate}</Typography>
-									<Typography>.</Typography>
+								<Stack
+									direction="row"
+									justifyContent="space-between"
+									alignItems="center"
+									spacing={2}
+									sx={{ color: '#adadad' }}
+									pt={1}>
+									<Typography>
+										{new Date(i?.fields?.publishDate).toLocaleDateString('en-US', {
+											weekday: 'long',
+											year: 'numeric',
+											month: 'long',
+											day: 'numeric',
+										})}
+									</Typography>
+
 									<Typography>No Comments</Typography>
 								</Stack>
 							</Stack>
