@@ -175,7 +175,7 @@ const Header: React.FC<IProps> = ({ bg }) => {
 						width={{ xs: 'auto', md: '50%', lg: 'auto' }}
 						mt={{ xs: 2, lg: 0 }}>
 						<Paper sx={styles.paper}>1 Landian Token (LNDA) = $0.34</Paper>
-						<Paper sx={styles.blackpaper}>swap LNDA</Paper>
+						<Paper sx={styles.blackpaper}>{t('buy.buy')}</Paper>
 					</Stack>
 				</Stack>
 			</Box>
