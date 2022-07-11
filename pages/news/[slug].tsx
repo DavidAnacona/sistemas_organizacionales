@@ -33,9 +33,6 @@ const DetailNews = ({ news, params }: any) => {
 
 			<Container sx={{ pt: { xs: 40, lg: 30 }, pb: 30, flex: 1 }}>
 				<Stack spacing={2}>
-					<Typography variant="h4" textAlign="center">
-						{news?.fields?.title}
-					</Typography>
 					<img
 						src={news?.fields?.heroImage?.fields?.file?.url}
 						width="100%"
@@ -43,6 +40,9 @@ const DetailNews = ({ news, params }: any) => {
 						style={{ objectFit: 'cover' }}
 						alt="blog-image"
 					/>
+					<Typography variant="h4" textAlign="center">
+						{news?.fields?.title}
+					</Typography>
 					<Stack mt={4}>{documentToReactComponents(news?.fields?.content)}</Stack>
 				</Stack>
 			</Container>

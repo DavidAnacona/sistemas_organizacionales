@@ -134,7 +134,7 @@ const Home: NextPage = () => {
 						alignItems: 'center',
 					}}>
 					<Box sx={{ textAlign: 'center' }}>
-						<Typography sx={{ maxWidth: '700px' }} fontSize={{ xs: '2em', lg: '4em' }}>
+						<Typography sx={{ maxWidth: '700px' }} fontFamily="PhatBoy Slim !important" fontSize={{ xs: '2em', lg: '4em' }}>
 							{t('homepage.title')}
 						</Typography>
 					</Box>
