@@ -21,7 +21,7 @@ const NewsPage = ({ news }: any) => {
 		<>
 			<Header bg="black" />
 			<MediaIcons />
-			<Container sx={{ pt: { xs: 40, lg: 30 }, pb: 30, flex: 1 }}>
+			<Container sx={{ pt: 10, pb: 30, flex: 1 }}>
 				<Typography fontWeight="bold" textAlign="center" variant="h4">
 					News
 				</Typography>

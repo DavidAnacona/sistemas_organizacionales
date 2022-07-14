@@ -1,16 +1,16 @@
-import backgroundSeccion from '../../public/2022/backgroundSeccion.png';
+import backgroundSeccion from '../../public/2022/03/logo-linear-fondo-dark.svg';
 
 export const useStyles = () => ({
 	seccion: {
 		container: {
 			backgroundImage: `url('${backgroundSeccion.src}')`,
+			backgroundPosition: 'center center',
+
 			backgroundRepeat: 'no-repeat',
-			backgroundSize: '100% 100%',
-			backgroundPosition: 'center',
-			display: 'flex',
-			flexDirection: { xs: '', md: 'row-reverse' },
-			justifyContent: { xs: 'center', md: 'space-between' },
-			height: { xs: 'auto', lg: '100vh' },
+			backgroundSize: { xs: '90% auto', md: '650px auto' },
+			minHeight: { xs: 'auto', md: '100vh' },
+			transition: 'all ease 1s',
+			transitionTimingFunction: 'cubic-bezier(0,.33,.07,1.03)',
 		},
 		separationSeccion: {
 			display: 'flex',
@@ -38,7 +38,7 @@ export const useStyles = () => ({
 			backgroundColor: '#000000',
 		},
 		nameSeccion: {
-			display: { xs: 'none', md: 'none', lg: 'block' },
+			display: { xs: 'none', md: 'none', xl: 'block' },
 			marginLeft: '20px',
 			borderBottom: '1px solid  #424949',
 			width: '10.3vw',
@@ -51,7 +51,8 @@ export const useStyles = () => ({
 		},
 		titleSeccion: {
 			marginBottom: '15px',
-			fontSize: { xs: '40px', md: '50px' },
+			fontSize: { xs: '22px', md: '42px' },
+			fontWeight: 500,
 		},
 		containerRelatedLink: {
 			display: 'flex',
@@ -61,11 +62,11 @@ export const useStyles = () => ({
 		firstRelatedLink: {
 			fontWeight: 'lighter',
 			marginRight: '30px',
-			fontSize: { xs: '13px', md: '14px', lg: '16px' },
+			fontSize: { xs: '13px', md: '14px' },
 		},
 		secondRelatedLink: {
 			fontWeight: 'lighter',
-			fontSize: { xs: '13px', md: '14px', lg: '16px' },
+			fontSize: { xs: '13px', md: '14px' },
 		},
 		containerInformation: {
 			display: 'flex',

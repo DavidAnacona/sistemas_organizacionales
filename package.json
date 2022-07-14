@@ -1,37 +1,39 @@
 {
-  "name": "landian",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@contentful/rich-text-react-renderer": "^15.12.1",
-    "@emotion/cache": "^11.7.1",
-    "@emotion/react": "^11.9.0",
-    "@emotion/server": "^11.4.0",
-    "@emotion/styled": "^11.6.0",
-    "@fontsource/roboto": "^4.5.1",
-    "@mui/icons-material": "^5.6.2",
-    "@mui/material": "^5.7.0",
-    "contentful": "^9.1.32",
-    "i18n-next": "^0.0.4",
-    "i18next": "^21.8.8",
-    "next": "^12.1.6",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-i18next": "^11.17.0",
-    "react-icons": "^4.4.0",
-    "react-lottie": "^1.2.3"
-  },
-  "devDependencies": {
-    "@types/node": "^17.0.33",
-    "@types/react": "^18.0.9",
-    "@types/react-lottie": "^1.2.6",
-    "eslint": "^8.15.0",
-    "eslint-config-next": "^12.1.6",
-    "typescript": "^4.6.4"
-  }
+	"name": "landian",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@contentful/rich-text-react-renderer": "^15.12.1",
+		"@emotion/cache": "^11.7.1",
+		"@emotion/react": "^11.9.0",
+		"@emotion/server": "^11.4.0",
+		"@emotion/styled": "^11.6.0",
+		"@fontsource/montserrat": "^4.5.11",
+		"@fontsource/roboto": "^4.5.1",
+		"@mui/icons-material": "^5.6.2",
+		"@mui/material": "^5.7.0",
+		"contentful": "^9.1.32",
+		"framer-motion": "^6.4.3",
+		"i18n-next": "^0.0.4",
+		"i18next": "^21.8.8",
+		"next": "^12.1.6",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"react-i18next": "^11.17.0",
+		"react-icons": "^4.4.0",
+		"react-lottie": "^1.2.3"
+	},
+	"devDependencies": {
+		"@types/node": "^17.0.33",
+		"@types/react": "^18.0.9",
+		"@types/react-lottie": "^1.2.6",
+		"eslint": "^8.15.0",
+		"eslint-config-next": "^12.1.6",
+		"typescript": "^4.6.4"
+	}
 }
