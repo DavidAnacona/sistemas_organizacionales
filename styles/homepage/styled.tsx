@@ -79,7 +79,7 @@ export const useStyles = () => ({
 		},
 		containerAnimation: {
 			alignSelf: 'center',
-			width: { xs: '450px', md: '500px', lg: '650px' },
+			width: { xs: '450px', md: '550px' },
 		},
 		containerEconomicsTags: {
 			display: 'flex',
