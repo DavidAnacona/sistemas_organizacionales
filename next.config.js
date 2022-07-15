@@ -14,4 +14,5 @@ module.exports = {
 		return config;
 	},
 	exportTrailingSlash: true,
+	experimental: { outputStandalone: true },
 };
