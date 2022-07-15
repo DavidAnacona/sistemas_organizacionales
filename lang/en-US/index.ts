@@ -3,6 +3,8 @@ import { LNDA } from './pages/LNDA';
 import { navbar } from './pages/navbar';
 import { contact } from './pages/contact';
 import { buy } from './pages/BuyLNDA';
+import { Terms } from './pages/terms';
+import { Privacy } from './pages/privacy';
 
 const translationsEN = {
 	homepage,
@@ -10,6 +12,8 @@ const translationsEN = {
 	LNDA,
 	contact,
 	buy,
+	Terms,
+	Privacy,
 };
 
 export default translationsEN;

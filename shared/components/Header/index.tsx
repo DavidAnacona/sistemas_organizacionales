@@ -222,12 +222,22 @@ const Header: React.FC<IProps> = ({ bg }) => {
 												aria-labelledby="composition-button"
 												onKeyDown={handleListKeyDown}>
 												<MenuItem>
-													<a href="/2022/05/landian-whitepaper-es-24-05-2022.pdf" target="_blank" rel="noopener noreferrer">
+													<a
+														href={`/2022/03/${
+															router.locale === 'en-US' ? 'whitepaper-EN_8-07-2022.pdf' : 'whitepaper-ES_8-07-2022.pdf'
+														}`}
+														target="_blank"
+														rel="noopener noreferrer">
 														<Typography>Whitepaper</Typography>
 													</a>
 												</MenuItem>
 												<MenuItem>
-													<a href="/2022/05/landian-litepaper-en-05-2022.pdf" target="_blank" rel="noopener noreferrer">
+													<a
+														href={`/2022/03/${
+															router.locale === 'en-US' ? 'litepaper-EN_8-07-2022.pdf' : 'litepaper-ES_8-07-2022.pdf'
+														}`}
+														target="_blank"
+														rel="noopener noreferrer">
 														<Typography>Litepaper</Typography>
 													</a>
 												</MenuItem>
@@ -279,8 +289,10 @@ const Header: React.FC<IProps> = ({ bg }) => {
 						gap="5px"
 						width={{ xs: 'auto', md: '50%', lg: 'auto' }}
 						mt={{ xs: 2, lg: 0 }}>
-						<Paper sx={styles.paper}>1 Landian Token (LNDA) = $0.34</Paper>
-						<Paper sx={styles.blackpaper}>{t('buy.buy')}</Paper>
+						<Paper sx={styles.paper}>1 Landian Token (LNDA) = $0.41</Paper>
+						<a href="https://swap.landian.io/#/home" target="_blank" style={{ width: '100%' }}>
+							<Paper sx={styles.blackpaper}>{t('buy.buy')}</Paper>
+						</a>
 					</Stack>
 				</Stack>
 			</Box>

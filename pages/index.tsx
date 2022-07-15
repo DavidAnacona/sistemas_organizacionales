@@ -7,7 +7,7 @@ import Header from 'shared/components/Header';
 import MediaIcons from 'shared/components/MediaIcons';
 import Footer from 'shared/components/Footer';
 import Lottie from 'react-lottie';
-import animationIntroduction from '../public/2022/03/100801-eyes-intro.json';
+import animationIntroduction from '../public/2022/03/introduction-100560-kaia2.json';
 import animationTechnology from '../public/2022/03/100739-tec3.json';
 import animationEcosystem from '../public/2022/03/100788-builds3.json';
 import animationEconomics from '../public/2022/03/101035-layer8.json';
@@ -30,6 +30,7 @@ import { CheckBox } from '@mui/icons-material';
 import { useLayoutEffect, useRef, useState } from 'react';
 import { useViewportScroll, useTransform, motion, AnimatePresence } from 'framer-motion';
 import seo from '../public/2022/1/logo_black.svg';
+import { useRouter } from 'next/router';
 
 const defaultOptionsGlobal = {
 	loop: true,
@@ -102,7 +103,7 @@ const Home: NextPage = () => {
 
 	const { scrollY } = useViewportScroll();
 	const rotate = useTransform(scrollY, [0, 150], [0, 3], { clamp: false });
-	const rotate2 = useTransform(scrollY, [100, 0], [-9, -8], { clamp: false });
+	const rotate2 = useTransform(scrollY, [150, 0], [-9, -6], { clamp: false });
 
 	const ContainerSection = ({ step = 1, children }: { step: number; children: React.ReactNode | React.ReactFragment }) => {
 		return (
@@ -137,6 +138,7 @@ const Home: NextPage = () => {
 			</Stack>
 		);
 	};
+	const router = useRouter();
 	return (
 		<div>
 			<Head>
@@ -218,7 +220,7 @@ const Home: NextPage = () => {
 							</motion.div>
 						</AnimatePresence>
 					</Box>
-					<Box position="absolute" left={{ xs: '10%', md: '20%' }} bottom="0">
+					<Box position="absolute" left={{ xs: '10%', md: '15%' }} bottom="0">
 						<AnimatePresence exitBeforeEnter>
 							<motion.div
 								initial={{ x: -100, opacity: 0 }}
@@ -292,7 +294,10 @@ const Home: NextPage = () => {
 								{t('homepage.information')}
 							</Typography>
 							<Box>
-								<Button variant="dashed">
+								<Button
+									variant="dashed"
+									target="_blank"
+									href={`/2022/03/${router.locale === 'en-US' ? 'whitepaper-EN_8-07-2022.pdf' : 'whitepaper-ES_8-07-2022.pdf'}`}>
 									Whitepaper
 									<HiDownload style={{ paddingLeft: '5px' }} size={17} />
 								</Button>
@@ -353,7 +358,10 @@ const Home: NextPage = () => {
 								{t('homepage.information')}
 							</Typography>
 							<Box>
-								<Button variant="dashed">
+								<Button
+									variant="dashed"
+									target="_blank"
+									href={`/2022/03/${router.locale === 'en-US' ? 'whitepaper-EN_8-07-2022.pdf' : 'whitepaper-ES_8-07-2022.pdf'}`}>
 									Whitepaper
 									<HiDownload style={{ paddingLeft: '5px' }} size={17} />
 								</Button>
@@ -413,7 +421,10 @@ const Home: NextPage = () => {
 								{t('homepage.information')}
 							</Typography>
 							<Box>
-								<Button variant="dashed">
+								<Button
+									variant="dashed"
+									target="_blank"
+									href={`/2022/03/${router.locale === 'en-US' ? 'whitepaper-EN_8-07-2022.pdf' : 'whitepaper-ES_8-07-2022.pdf'}`}>
 									Whitepaper
 									<HiDownload style={{ paddingLeft: '5px' }} size={17} />
 								</Button>
@@ -485,7 +496,10 @@ const Home: NextPage = () => {
 								{t('homepage.information')}
 							</Typography>
 							<Box>
-								<Button variant="dashed">
+								<Button
+									variant="dashed"
+									target="_blank"
+									href={`/2022/03/${router.locale === 'en-US' ? 'whitepaper-EN_8-07-2022.pdf' : 'whitepaper-ES_8-07-2022.pdf'}`}>
 									Whitepaper
 									<HiDownload style={{ paddingLeft: '5px' }} size={17} />
 								</Button>
@@ -544,7 +558,10 @@ const Home: NextPage = () => {
 								{t('homepage.information')}
 							</Typography>
 							<Box>
-								<Button variant="dashed">
+								<Button
+									variant="dashed"
+									target="_blank"
+									href={`/2022/03/${router.locale === 'en-US' ? 'whitepaper-EN_8-07-2022.pdf' : 'whitepaper-ES_8-07-2022.pdf'}`}>
 									Whitepaper
 									<HiDownload style={{ paddingLeft: '5px' }} size={17} />
 								</Button>
@@ -604,7 +621,10 @@ const Home: NextPage = () => {
 								{t('homepage.information')}
 							</Typography>
 							<Box>
-								<Button variant="dashed">
+								<Button
+									variant="dashed"
+									target="_blank"
+									href={`/2022/03/${router.locale === 'en-US' ? 'whitepaper-EN_8-07-2022.pdf' : 'whitepaper-ES_8-07-2022.pdf'}`}>
 									Whitepaper
 									<HiDownload style={{ paddingLeft: '5px' }} size={17} />
 								</Button>
@@ -729,8 +749,8 @@ const Home: NextPage = () => {
 								<Image
 									src="/2022/05/Elias.jpg"
 									layout="responsive"
-									width={medium ? 110 : small ? 90 : 130}
-									height={medium ? 110 : small ? 90 : 130}
+									width={medium ? 100 : small ? 90 : 100}
+									height={medium ? 100 : small ? 90 : 100}
 								/>
 							</Box>
 							<Typography paragraph sx={stylesGeneral.seccion.memberName}>
@@ -741,12 +761,16 @@ const Home: NextPage = () => {
 					<Box sx={{ marginTop: '25px' }}>
 						<Box sx={stylesGeneral.seccion.containerInformation}>
 							<Typography paragraph sx={stylesGeneral.seccion.information}>
-								{t('homepage.information')}
+								{t('homepage.Team.know')}
 							</Typography>
 							<Box>
-								<Button variant="dashed">
-									Whitepaper
-									<HiDownload style={{ paddingLeft: '5px' }} size={17} />
+								<Button
+									variant="dashed"
+									target="_blank"
+									href={`/2022/03/${
+										router.locale === 'en-US' ? 'whitepaper-EN_8-07-2022.pdf#page=35' : 'whitepaper-ES_8-07-2022.pdf#page=35'
+									}`}>
+									{t('homepage.Team.rest')}
 								</Button>
 							</Box>
 						</Box>
@@ -788,8 +812,15 @@ const Home: NextPage = () => {
 
 					<Box sx={stylesGeneral.seccion.containerInformation}>
 						<Stack direction={{ xs: 'row', lg: 'row' }} alignItems="center" justifyContent="center" height="100%" gap="5px">
-							<Paper sx={stylesGeneral.seccion.paper}>{t('homepage.shortInformation')}</Paper>
-							<Paper sx={stylesGeneral.seccion.blackpaper}>swap LNDA</Paper>
+							<Button variant="dashed" onClick={() => router.push('/LNDA')}>
+								{t('homepage.shortInformation')}
+							</Button>
+							<a
+								href={`/2022/03/${router.locale === 'en-US' ? 'whitepaper-EN_8-07-2022.pdf' : 'whitepaper-ES_8-07-2022.pdf'}`}
+								target="_blank"
+								rel="noopener noreferrer">
+								<Paper sx={stylesGeneral.seccion.blackpaper}>swap LNDA</Paper>
+							</a>
 						</Stack>
 					</Box>
 				</Box>
@@ -814,7 +845,7 @@ const Home: NextPage = () => {
 						{t('homepage.Suscribe.title')}
 					</Typography>
 					<Box>
-						<Button variant="dashed">
+						<Button variant="dashed" href="https://twitter.com/landianmeta" target="_blank">
 							<FaTwitter size={20} />
 							<Typography fontSize={20} sx={{ marginLeft: '10px' }}>
 								Twitter

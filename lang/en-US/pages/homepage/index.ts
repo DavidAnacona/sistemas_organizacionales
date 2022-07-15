@@ -153,6 +153,8 @@ extremely cost-effective for communities.`,
 	Team: {
 		title: 'Core Team',
 		members: ['Austin', 'Alejo', 'Charlie', 'Miguel', 'Omar', 'Daniel', 'Elías'],
+		know: 'Conoce al',
+		rest: 'Resto del equipo',
 	},
 	Experience: {
 		title: 'LNDA TOKEN',

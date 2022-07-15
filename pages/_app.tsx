@@ -16,8 +16,6 @@ import '../styles/globals.css';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'react-i18next';
 
-import { ParallaxProvider } from 'react-scroll-parallax';
-
 interface MyAppProps extends AppProps {
 	emotionCache?: EmotionCache;
 }
@@ -36,14 +34,12 @@ const MyApp: React.FunctionComponent<MyAppProps> = (props) => {
 	}, [i18n, locale]);
 
 	return (
-		<ParallaxProvider>
-			<CacheProvider value={emotionCache}>
-				<ThemeProvider theme={lightTheme}>
-					<CssBaseline />
-					<Component {...pageProps} />
-				</ThemeProvider>
-			</CacheProvider>
-		</ParallaxProvider>
+		<CacheProvider value={emotionCache}>
+			<ThemeProvider theme={lightTheme}>
+				<CssBaseline />
+				<Component {...pageProps} />
+			</ThemeProvider>
+		</CacheProvider>
 	);
 };
 

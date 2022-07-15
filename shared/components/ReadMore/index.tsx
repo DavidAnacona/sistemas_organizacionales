@@ -27,7 +27,7 @@ const ReadMore: FC<IProps> = ({ children, numberWords }) => {
 						lineHeight: '1.5em',
 					}}>
 					{isReadMore ? text?.slice(0, numberWords) : text}
-					<span style={{ display: 'block', cursor: 'pointer' }} onClick={toggleReadMore}>
+					<span style={{ display: 'block', cursor: 'pointer', fontWeight: 'bold' }} onClick={toggleReadMore}>
 						{isReadMore ? t('homepage.toggleMore') : t('homepage.toggleLess')}
 					</span>
 				</pre>

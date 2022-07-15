@@ -184,6 +184,8 @@ comunidades.`,
 	Team: {
 		title: 'Core Team',
 		members: ['Austin', 'Alejo', 'Charlie', 'Miguel', 'Omar', 'Daniel', 'Elías'],
+		know: 'Meet the',
+		rest: 'Rest of the Team',
 	},
 	Experience: {
 		title: 'TOKEN LNDA',
