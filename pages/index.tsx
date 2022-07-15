@@ -31,6 +31,7 @@ import { useLayoutEffect, useRef, useState } from 'react';
 import { useViewportScroll, useTransform, motion, AnimatePresence } from 'framer-motion';
 import seo from '../public/2022/1/logo_black.svg';
 import { useRouter } from 'next/router';
+import Count from 'shared/components/Count';
 
 const defaultOptionsGlobal = {
 	loop: true,
@@ -866,7 +867,7 @@ const Home: NextPage = () => {
 						{t('homepage.Count.title')}
 					</Typography>
 					<Box>
-						<h1>count down</h1>
+						<Count />
 					</Box>
 				</Box>
 

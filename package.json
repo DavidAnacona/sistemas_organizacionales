@@ -23,6 +23,7 @@
 		"i18next": "^21.8.8",
 		"next": "^12.1.6",
 		"react": "^17.0.2",
+		"react-countdown": "^2.3.2",
 		"react-dom": "^17.0.2",
 		"react-i18next": "^11.17.0",
 		"react-icons": "^4.4.0",
