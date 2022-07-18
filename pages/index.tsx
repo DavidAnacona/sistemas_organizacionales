@@ -1,6 +1,4 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
 import { useTranslation } from 'react-i18next';
 import { Box, Typography, Stack, Button, TextField, Checkbox, useMediaQuery, Hidden, Paper } from '@mui/material';
 import Header from 'shared/components/Header';
@@ -98,9 +96,10 @@ const Home: NextPage = () => {
 	};
 
 	const { scrollY } = useViewportScroll();
-	const rotate = useTransform(scrollY, [0, 150], [0, 3], { clamp: false });
-	const rotate2 = useTransform(scrollY, [150, 0], [-9, -6], { clamp: false });
+	const rotate = useTransform(scrollY, [0, 150, 20], [0, 3, 0], { clamp: false });
+	const rotate2 = useTransform(scrollY, [0, 300], [0, -5], { clamp: false });
 
+	console.log(scrollY);
 	const ContainerSection = ({ step = 1, children }: { step: number; children: React.ReactNode | React.ReactFragment }) => {
 		return (
 			<Stack sx={stylesGeneral.seccion.container}>
@@ -134,6 +133,16 @@ const Home: NextPage = () => {
 			</Stack>
 		);
 	};
+
+	const WhitePapperBtn = () => (
+		<Button
+			variant="dashed"
+			target="_blank"
+			href={`/2022/03/${router.locale === 'en-US' ? 'whitepaper-EN_8-07-2022.pdf' : 'whitepaper-ES_8-07-2022.pdf'}`}>
+			Whitepaper
+			<HiDownload style={{ paddingLeft: '5px' }} size={17} />
+		</Button>
+	);
 	const router = useRouter();
 	return (
 		<div>
@@ -191,7 +200,7 @@ const Home: NextPage = () => {
 							</Box>
 						</Hidden>
 					</Box>
-					<Box position="absolute" left={{ xs: '10%', md: '20%' }} top="5%">
+					<Box position="absolute" left={{ xs: '10%', md: '15%' }} top="15%">
 						<AnimatePresence exitBeforeEnter>
 							<motion.div
 								initial={{ x: -100, opacity: 0 }}
@@ -202,7 +211,7 @@ const Home: NextPage = () => {
 							</motion.div>
 						</AnimatePresence>
 					</Box>
-					<Box position="absolute" left={{ xs: '10%', md: '15%' }} bottom="0">
+					<Box position="absolute" left={{ xs: '10%', md: '10%' }} bottom="0">
 						<AnimatePresence exitBeforeEnter>
 							<motion.div
 								initial={{ x: -100, opacity: 0 }}
@@ -213,7 +222,7 @@ const Home: NextPage = () => {
 							</motion.div>
 						</AnimatePresence>
 					</Box>
-					<Box position="absolute" right={{ xs: '10%', md: '20%' }} bottom="5%">
+					<Box position="absolute" right={{ xs: '10%', md: '15%' }} bottom="15%">
 						<AnimatePresence exitBeforeEnter>
 							<motion.div
 								initial={{ x: -100, opacity: 0 }}
@@ -224,7 +233,7 @@ const Home: NextPage = () => {
 							</motion.div>
 						</AnimatePresence>
 					</Box>
-					<Box position="absolute" right={{ xs: '10%', md: '20%' }} top="5%">
+					<Box position="absolute" right={{ xs: '10%', md: '15%' }} top="5%">
 						<AnimatePresence exitBeforeEnter>
 							<motion.div
 								initial={{ x: -100, opacity: 0 }}
@@ -276,13 +285,7 @@ const Home: NextPage = () => {
 								{t('homepage.information')}
 							</Typography>
 							<Box>
-								<Button
-									variant="dashed"
-									target="_blank"
-									href={`/2022/03/${router.locale === 'en-US' ? 'whitepaper-EN_8-07-2022.pdf' : 'whitepaper-ES_8-07-2022.pdf'}`}>
-									Whitepaper
-									<HiDownload style={{ paddingLeft: '5px' }} size={17} />
-								</Button>
+								<WhitePapperBtn />
 							</Box>
 						</Box>
 					</Box>
@@ -340,13 +343,7 @@ const Home: NextPage = () => {
 								{t('homepage.information')}
 							</Typography>
 							<Box>
-								<Button
-									variant="dashed"
-									target="_blank"
-									href={`/2022/03/${router.locale === 'en-US' ? 'whitepaper-EN_8-07-2022.pdf' : 'whitepaper-ES_8-07-2022.pdf'}`}>
-									Whitepaper
-									<HiDownload style={{ paddingLeft: '5px' }} size={17} />
-								</Button>
+								<WhitePapperBtn />
 							</Box>
 						</Box>
 					</Box>
@@ -403,13 +400,7 @@ const Home: NextPage = () => {
 								{t('homepage.information')}
 							</Typography>
 							<Box>
-								<Button
-									variant="dashed"
-									target="_blank"
-									href={`/2022/03/${router.locale === 'en-US' ? 'whitepaper-EN_8-07-2022.pdf' : 'whitepaper-ES_8-07-2022.pdf'}`}>
-									Whitepaper
-									<HiDownload style={{ paddingLeft: '5px' }} size={17} />
-								</Button>
+								<WhitePapperBtn />
 							</Box>
 						</Box>
 					</Box>
@@ -478,13 +469,7 @@ const Home: NextPage = () => {
 								{t('homepage.information')}
 							</Typography>
 							<Box>
-								<Button
-									variant="dashed"
-									target="_blank"
-									href={`/2022/03/${router.locale === 'en-US' ? 'whitepaper-EN_8-07-2022.pdf' : 'whitepaper-ES_8-07-2022.pdf'}`}>
-									Whitepaper
-									<HiDownload style={{ paddingLeft: '5px' }} size={17} />
-								</Button>
+								<WhitePapperBtn />
 							</Box>
 						</Box>
 					</Box>
@@ -540,13 +525,7 @@ const Home: NextPage = () => {
 								{t('homepage.information')}
 							</Typography>
 							<Box>
-								<Button
-									variant="dashed"
-									target="_blank"
-									href={`/2022/03/${router.locale === 'en-US' ? 'whitepaper-EN_8-07-2022.pdf' : 'whitepaper-ES_8-07-2022.pdf'}`}>
-									Whitepaper
-									<HiDownload style={{ paddingLeft: '5px' }} size={17} />
-								</Button>
+								<WhitePapperBtn />
 							</Box>
 						</Box>
 					</Box>
@@ -603,13 +582,7 @@ const Home: NextPage = () => {
 								{t('homepage.information')}
 							</Typography>
 							<Box>
-								<Button
-									variant="dashed"
-									target="_blank"
-									href={`/2022/03/${router.locale === 'en-US' ? 'whitepaper-EN_8-07-2022.pdf' : 'whitepaper-ES_8-07-2022.pdf'}`}>
-									Whitepaper
-									<HiDownload style={{ paddingLeft: '5px' }} size={17} />
-								</Button>
+								<WhitePapperBtn />
 							</Box>
 						</Box>
 					</Box>
@@ -650,12 +623,7 @@ const Home: NextPage = () => {
 					<Stack sx={stylesGeneral.seccion.containerMembers}>
 						<Box sx={stylesGeneral.seccion.containerTeam}>
 							<Box sx={stylesGeneral.seccion.containerImage}>
-								<Image
-									src="/2022/05/Austin-300x300.jpg"
-									layout="responsive"
-									width={medium ? 110 : small ? 90 : 130}
-									height={medium ? 110 : small ? 90 : 130}
-								/>
+								<Image src="/2022/03/Austin.jpg" layout="responsive" width={20} height={20} />
 							</Box>
 							<Typography paragraph sx={stylesGeneral.seccion.memberName}>
 								{t('homepage.Team.members.0')}
@@ -664,79 +632,91 @@ const Home: NextPage = () => {
 						<Box sx={stylesGeneral.seccion.containerTeam}>
 							<Box sx={stylesGeneral.seccion.containerImage}>
 								<Image
-									src="/2022/05/Alejo-300x300.jpg"
+									src="/2022/03/Miguel.jpg"
+									width={medium ? 110 : small ? 90 : 130}
+									height={medium ? 110 : small ? 90 : 130}
+								/>
+							</Box>
+							<Typography paragraph sx={stylesGeneral.seccion.memberName}>
+								Miguel
+							</Typography>
+						</Box>
+						<Box sx={stylesGeneral.seccion.containerTeam}>
+							<Box sx={stylesGeneral.seccion.containerImage}>
+								<Image
+									src="/2022/03/Omarcc4.jpg"
 									layout="responsive"
 									width={medium ? 110 : small ? 90 : 130}
 									height={medium ? 110 : small ? 90 : 130}
 								/>
 							</Box>
 							<Typography paragraph sx={stylesGeneral.seccion.memberName}>
-								{t('homepage.Team.members.1')}
+								Omar
 							</Typography>
 						</Box>
 						<Box sx={stylesGeneral.seccion.containerTeam}>
 							<Box sx={stylesGeneral.seccion.containerImage}>
 								<Image
-									src="/2022/05/Charlie-300x300.jpg"
+									src="/2022/03/Daniel.jpg"
 									layout="responsive"
 									width={medium ? 110 : small ? 90 : 130}
 									height={medium ? 110 : small ? 90 : 130}
 								/>
 							</Box>
 							<Typography paragraph sx={stylesGeneral.seccion.memberName}>
-								{t('homepage.Team.members.2')}
+								Daniel
 							</Typography>
 						</Box>
 						<Box sx={stylesGeneral.seccion.containerTeam}>
 							<Box sx={stylesGeneral.seccion.containerImage}>
 								<Image
-									src="/2022/05/Miguel-300x300.jpg"
+									src="/2022/03/Elias.jpg"
 									layout="responsive"
 									width={medium ? 110 : small ? 90 : 130}
 									height={medium ? 110 : small ? 90 : 130}
 								/>
 							</Box>
 							<Typography paragraph sx={stylesGeneral.seccion.memberName}>
-								{t('homepage.Team.members.3')}
+								Elias
 							</Typography>
 						</Box>
 						<Box sx={stylesGeneral.seccion.containerTeam}>
 							<Box sx={stylesGeneral.seccion.containerImage}>
 								<Image
-									src="/2022/05/Omar-300x300.jpg"
+									src="/2022/03/Rebeca.jpg"
 									layout="responsive"
 									width={medium ? 110 : small ? 90 : 130}
 									height={medium ? 110 : small ? 90 : 130}
 								/>
 							</Box>
 							<Typography paragraph sx={stylesGeneral.seccion.memberName}>
-								{t('homepage.Team.members.4')}
+								Rebeca
 							</Typography>
 						</Box>
 						<Box sx={stylesGeneral.seccion.containerTeam}>
 							<Box sx={stylesGeneral.seccion.containerImage}>
 								<Image
-									src="/2022/05/Daniel.jpg"
-									layout="responsive"
-									width={medium ? 110 : small ? 90 : 130}
-									height={medium ? 110 : small ? 90 : 130}
-								/>
-							</Box>
-							<Typography paragraph sx={stylesGeneral.seccion.memberName}>
-								{t('homepage.Team.members.5')}
-							</Typography>
-						</Box>
-						<Box sx={stylesGeneral.seccion.containerTeam}>
-							<Box sx={stylesGeneral.seccion.containerImage}>
-								<Image
-									src="/2022/05/Elias.jpg"
+									src="/2022/03/Juan.jpg"
 									layout="responsive"
 									width={medium ? 100 : small ? 90 : 100}
 									height={medium ? 100 : small ? 90 : 100}
 								/>
 							</Box>
 							<Typography paragraph sx={stylesGeneral.seccion.memberName}>
-								{t('homepage.Team.members.6')}
+								Juan
+							</Typography>
+						</Box>
+						<Box sx={stylesGeneral.seccion.containerTeam}>
+							<Box sx={stylesGeneral.seccion.containerImage}>
+								<Image
+									src="/2022/03/Stefania.jpg"
+									layout="responsive"
+									width={medium ? 100 : small ? 90 : 100}
+									height={medium ? 100 : small ? 90 : 100}
+								/>
+							</Box>
+							<Typography paragraph sx={stylesGeneral.seccion.memberName}>
+								Stefania
 							</Typography>
 						</Box>
 					</Stack>
