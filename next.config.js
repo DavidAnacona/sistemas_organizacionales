@@ -13,6 +13,6 @@ module.exports = {
 
 		return config;
 	},
-	exportTrailingSlash: true,
+	trailingSlash: true,
 	experimental: { outputStandalone: true },
 };
