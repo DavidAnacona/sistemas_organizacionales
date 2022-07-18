@@ -10,8 +10,8 @@ import SEO from 'shared/components/SEO';
 
 const client = createClient({ space: 'gaplxiqoo24e', accessToken: 'MHhFPSCj0xiUYWSbBu0m-sI-49msyaJSnc_vWKTGLAE' });
 
-export async function getStaticPaths({ locale }: any) {
-	const res = await client.getEntries({ content_type: 'blogPost', locale });
+export async function getStaticPaths() {
+	const res = await client.getEntries({ content_type: 'blogPost' });
 
 	const paths = res.items.map((item: any) => {
 		return { params: { slug: item?.fields?.slug } };
@@ -21,8 +21,8 @@ export async function getStaticPaths({ locale }: any) {
 		fallback: true,
 	};
 }
-export async function getStaticProps({ params }: any) {
-	const { items } = await client.getEntries({ content_type: 'blogPost', 'fields.slug': params.slug });
+export async function getStaticProps({ params, locale }: any) {
+	const { items } = await client.getEntries({ content_type: 'blogPost', 'fields.slug': params.slug, locale });
 	return { props: { news: items[0], params } };
 }
 
