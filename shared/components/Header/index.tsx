@@ -310,7 +310,16 @@ const Header: React.FC<IProps> = ({ bg }) => {
 							)}
 						</Popper>
 						<Link href="/#">
-							<Typography>{t('navbar.options.4')}</Typography>
+							<Typography
+								fontSize="12.6px"
+								sx={{
+									transition: 'all ease 0.5s',
+									'&:hover': {
+										transform: 'scale(1.2)',
+									},
+								}}>
+								{t('navbar.options.4')}
+							</Typography>
 						</Link>
 						<Link href="/contact">
 							<Typography
