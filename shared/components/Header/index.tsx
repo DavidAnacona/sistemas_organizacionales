@@ -31,14 +31,6 @@ const Header: React.FC<IProps> = ({ bg }) => {
 	const { t } = useTranslation();
 	const router = useRouter();
 
-	const handleLocaleChange = (event: any) => {
-		const value = event.target.value;
-
-		router.push(router.route, router.asPath, {
-			locale: value,
-		});
-	};
-
 	const handleClickLocale = (value: string) => {
 		router.push(router.route, router.asPath, {
 			locale: value,
@@ -48,9 +40,15 @@ const Header: React.FC<IProps> = ({ bg }) => {
 
 	const [open, setOpen] = React.useState(false);
 	const anchorRef = React.useRef<HTMLButtonElement>(null);
+	const [open1, setOpen1] = React.useState(false);
+	const anchorRef1 = React.useRef<HTMLButtonElement>(null);
 
 	const handleToggle = () => {
 		setOpen((prevOpen) => !prevOpen);
+	};
+
+	const handleToggle1 = () => {
+		setOpen1((prevOpen) => !prevOpen);
 	};
 
 	const handleClose = (event: Event | React.SyntheticEvent) => {
@@ -60,6 +58,13 @@ const Header: React.FC<IProps> = ({ bg }) => {
 
 		setOpen(false);
 	};
+	const handleClose1 = (event: Event | React.SyntheticEvent) => {
+		if (anchorRef1.current && anchorRef1.current.contains(event.target as HTMLElement)) {
+			return;
+		}
+
+		setOpen1(false);
+	};
 
 	function handleListKeyDown(event: React.KeyboardEvent) {
 		if (event.key === 'Tab') {
@@ -67,6 +72,15 @@ const Header: React.FC<IProps> = ({ bg }) => {
 			setOpen(false);
 		} else if (event.key === 'Escape') {
 			setOpen(false);
+		}
+	}
+
+	function handleListKeyDown1(event: React.KeyboardEvent) {
+		if (event.key === 'Tab') {
+			event.preventDefault();
+			setOpen1(false);
+		} else if (event.key === 'Escape') {
+			setOpen1(false);
 		}
 	}
 
@@ -79,6 +93,15 @@ const Header: React.FC<IProps> = ({ bg }) => {
 
 		prevOpen.current = open;
 	}, [open]);
+	//
+	const prevOpen1 = React.useRef(open1);
+	React.useEffect(() => {
+		if (prevOpen1.current === true && open1 === false) {
+			anchorRef1.current!.focus();
+		}
+
+		prevOpen1.current = open1;
+	}, [open1]);
 	const ButtonLocale = () => (
 		<>
 			{router.locale === 'en-US' ? (
@@ -176,18 +199,57 @@ const Header: React.FC<IProps> = ({ bg }) => {
 								{t('navbar.options.1')}
 							</Typography>
 						</Link>
-						<Link href="/news">
-							<Typography
-								fontSize="12.6px"
-								sx={{
-									transition: 'all ease 0.5s',
-									'&:hover': {
-										transform: 'scale(1.2)',
-									},
-								}}>
-								{t('navbar.options.2')}
-							</Typography>
-						</Link>
+
+						<Typography
+							fontSize="12.6px"
+							sx={{
+								display: 'flex',
+								gap: 1,
+								alignItems: 'center',
+								transition: 'all ease 0.5s',
+								'&:hover': {
+									transform: 'scale(1.2)',
+								},
+							}}
+							ref={anchorRef1}
+							id="composition-button"
+							aria-controls={open1 ? 'composition-menu' : undefined}
+							aria-expanded={open1 ? 'true' : undefined}
+							aria-haspopup="true"
+							onClick={handleToggle1}>
+							Blog <AiFillCaretDown size={10} />
+						</Typography>
+
+						<Popper open={open1} anchorEl={anchorRef1.current} role={undefined} placement="bottom-start" transition disablePortal>
+							{({ TransitionProps, placement }) => (
+								<Grow
+									{...TransitionProps}
+									style={{
+										transformOrigin: placement === 'bottom-start' ? 'left top' : 'left bottom',
+									}}>
+									<Paper sx={{ background: 'white', color: 'black' }}>
+										<ClickAwayListener onClickAway={handleClose1}>
+											<MenuList
+												autoFocusItem={open1}
+												id="composition-menu"
+												aria-labelledby="composition-button"
+												onKeyDown={handleListKeyDown1}>
+												<MenuItem>
+													<Link href="/news">
+														<Typography>{t('navbar.options.2')}</Typography>
+													</Link>
+												</MenuItem>
+												<MenuItem>
+													<Link href="/blog">
+														<Typography>Blog</Typography>
+													</Link>
+												</MenuItem>
+											</MenuList>
+										</ClickAwayListener>
+									</Paper>
+								</Grow>
+							)}
+						</Popper>
 						<Typography
 							fontSize="12.6px"
 							sx={{
@@ -247,7 +309,7 @@ const Header: React.FC<IProps> = ({ bg }) => {
 								</Grow>
 							)}
 						</Popper>
-						<Link href="/news">
+						<Link href="/#">
 							<Typography
 								fontSize="12.6px"
 								sx={{

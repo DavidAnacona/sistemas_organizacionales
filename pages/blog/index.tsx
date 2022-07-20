@@ -24,16 +24,16 @@ const NewsPage = ({ news }: any) => {
 	const router = useRouter();
 	return (
 		<>
-			<SEO title="News" />
+			<SEO title="Blog" />
 			<Header bg="black" />
 			<MediaIcons />
 			<Container sx={{ pt: 10, pb: 30, flex: 1 }}>
 				<Typography fontFamily="PhatBoy Slim" fontWeight="bold" textAlign="center" variant="h4" mt={{ xs: 18, md: 8 }}>
-					{t('navbar.options.2')}
+					Blog
 				</Typography>
 				<Stack display="flex" direction="row" flexWrap="wrap" justifyContent="center" mt={3} gap={5}>
 					{news
-						?.filter((i: any) => i.fields.tags?.map((i: any) => i.fields.name).includes('News'))
+						?.filter((i: any) => i.fields.tags?.map((i: any) => i.fields.name).includes('Blog'))
 						?.map((i: any, index: any) => (
 							<Paper key={index} sx={{ background: 'white', color: 'black', width: '354px', height: 620 }}>
 								<img src={i.fields.heroImage.fields.file.url} style={{ height: '254px', objectFit: 'cover', width: '100%' }} />
@@ -47,7 +47,7 @@ const NewsPage = ({ news }: any) => {
 										</Typography>
 									</Box>
 									<Stack>
-										<Link href={`/news/${i.fields.slug}`}>
+										<Link href={`/blog/${i.fields.slug}`}>
 											<Button sx={{ color: 'black', width: 'fit-content' }}>
 												{router.locale === 'en-US' ? 'Read more' : 'Leer más'}
 											</Button>
@@ -69,7 +69,7 @@ const NewsPage = ({ news }: any) => {
 												day: 'numeric',
 											})}
 										</Typography>
-										<Typography fontSize="0.8rem"> {router.locale === 'en-US' ? 'No Comments' : 'Sin comentarios'}</Typography>
+										<Typography fontSize="0.8rem">{router.locale === 'en-US' ? 'No Comments' : 'Sin comentarios'}</Typography>
 									</Stack>
 								</Stack>
 							</Paper>
