@@ -6,6 +6,7 @@ import Footer from 'shared/components/Footer';
 import Header from 'shared/components/Header';
 import MediaIcons from 'shared/components/MediaIcons';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import SEO from 'shared/components/SEO';
 
 const client = createClient({ space: 'gaplxiqoo24e', accessToken: 'MHhFPSCj0xiUYWSbBu0m-sI-49msyaJSnc_vWKTGLAE' });
 
@@ -20,14 +21,15 @@ export async function getStaticPaths() {
 		fallback: true,
 	};
 }
-export async function getStaticProps({ params }: any) {
-	const { items } = await client.getEntries({ content_type: 'blogPost', 'fields.slug': params.slug });
+export async function getStaticProps({ params, locale }: any) {
+	const { items } = await client.getEntries({ content_type: 'blogPost', 'fields.slug': params.slug, locale });
 	return { props: { news: items[0], params } };
 }
 
 const DetailNews = ({ news, params }: any) => {
 	return (
 		<>
+			<SEO title={news?.fields?.title} />
 			<Header bg="black" />
 			<MediaIcons />
 

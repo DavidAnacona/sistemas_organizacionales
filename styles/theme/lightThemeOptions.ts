@@ -12,6 +12,13 @@ const lightThemeOptions: ThemeOptions = {
 		mode: 'dark',
 	},
 	components: {
+		MuiTypography: {
+			styleOverrides: {
+				root: {
+					fontFamily: "'Montserrat', sans-serif",
+				},
+			},
+		},
 		MuiButton: {
 			variants: [
 				{

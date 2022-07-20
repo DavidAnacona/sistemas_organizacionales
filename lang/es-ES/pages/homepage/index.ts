@@ -1,7 +1,8 @@
 export const homepage = {
-	title: `BIENVENIDO A LANDIAN,
-	 EL FUTURO DEL
-	 METAVERSO`,
+	title: `
+BIENVENIDO A LANDIAN,
+EL FUTURO DEL
+METAVERSO`,
 	toggleMore: '... Leer más',
 	toggleLess: 'Leer menos ...',
 	information: 'Más información en nuestro',
@@ -17,6 +18,7 @@ export const homepage = {
 		7: 'Equipo',
 		8: 'Experiencia',
 		9: 'Suscribirse',
+		10: 'Lot',
 	},
 	Introduction: {
 		title: 'Introducción de Landian',
@@ -182,6 +184,8 @@ comunidades.`,
 	Team: {
 		title: 'Core Team',
 		members: ['Austin', 'Alejo', 'Charlie', 'Miguel', 'Omar', 'Daniel', 'Elías'],
+		know: 'Meet the',
+		rest: 'Rest of the Team',
 	},
 	Experience: {
 		title: 'TOKEN LNDA',
@@ -194,5 +198,8 @@ utilizar para comprar tierras y activos digitales.`,
 	},
 	Suscribe: {
 		title: 'Para unirte a nuestro Whitelist, consulta nuestro twitter y sigue las instrucciones',
+	},
+	Count: {
+		title: 'Escoge tu lote en',
 	},
 };

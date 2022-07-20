@@ -1,5 +1,8 @@
 export const homepage = {
-	title: 'WELCOME TO LANDIAN, THE FUTURE OF METAVERSE',
+	title: `
+WELCOME TO LANDIAN,
+THE FUTURE 
+OF METAVERSE`,
 	toggleMore: '... Read more',
 	toggleLess: 'Read less ...',
 	information: 'Learn more in our',
@@ -15,6 +18,7 @@ export const homepage = {
 		7: 'Team',
 		8: 'Experience',
 		9: 'Suscribe',
+		10: 'Lot',
 	},
 	Introduction: {
 		title: 'Landian Introduction',
@@ -149,6 +153,8 @@ extremely cost-effective for communities.`,
 	Team: {
 		title: 'Core Team',
 		members: ['Austin', 'Alejo', 'Charlie', 'Miguel', 'Omar', 'Daniel', 'Elías'],
+		know: 'Conoce al',
+		rest: 'Resto del equipo',
 	},
 	Experience: {
 		title: 'LNDA TOKEN',
@@ -160,5 +166,8 @@ Metaverse. It can be used to purchase land and digital assets.`,
 	},
 	Suscribe: {
 		title: 'To join our Whitelist, check our twitter and follow the instructions',
+	},
+	Count: {
+		title: 'Choose your Lot in',
 	},
 };

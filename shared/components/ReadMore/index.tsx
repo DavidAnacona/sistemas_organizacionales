@@ -17,12 +17,17 @@ const ReadMore: FC<IProps> = ({ children, numberWords }) => {
 			setIsReadMore(!isReadMore);
 		};
 		return (
-			<Typography
-				fontSize={{ xs: '10.5px', md: '13px', lg: '15px' }}
-				sx={{ textAlign: { xs: 'center', md: 'left', lg: 'left' } }}>
-				<pre style={{ textAlign: matches ? 'center' : 'left' }}>
+			<Typography sx={{ textAlign: { xs: 'center', md: 'left', lg: 'left' } }}>
+				<pre
+					style={{
+						textAlign: matches ? 'center' : 'left',
+						fontFamily: 'Montserrat',
+						fontSize: '14px',
+						fontWeight: 400,
+						lineHeight: '1.5em',
+					}}>
 					{isReadMore ? text?.slice(0, numberWords) : text}
-					<span style={{ display: 'block', cursor: 'pointer' }} onClick={toggleReadMore}>
+					<span style={{ display: 'block', cursor: 'pointer', fontWeight: 'bold' }} onClick={toggleReadMore}>
 						{isReadMore ? t('homepage.toggleMore') : t('homepage.toggleLess')}
 					</span>
 				</pre>
@@ -41,7 +46,7 @@ export const Content: FC<PropsContent> = ({ seccion, numberWords }) => {
 	const { t } = useTranslation();
 	return (
 		<Box>
-			<Typography variant="body1">
+			<Typography sx={{ fontSize: '1rem', fontWeight: 400, lineHeight: '1.5em' }}>
 				<ReadMore numberWords={numberWords}>{t(`homepage.${seccion}.description`)}</ReadMore>
 			</Typography>
 		</Box>
