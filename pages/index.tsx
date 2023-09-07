@@ -146,9 +146,8 @@ const Home: NextPage = () => {
 	const router = useRouter();
 	return (
 		<div>
-			<SEO title="Home" />
+			<SEO title="Inicio" />
 			<Header />
-			<MediaIcons />
 			<Stack sx={{ ...stylesGeneral.seccion.container, position: 'relative' }}>
 				<Box
 					sx={{
@@ -165,9 +164,7 @@ const Home: NextPage = () => {
 							gap: 2,
 							justifyContent: 'center',
 						}}>
-						<Hidden mdDown>
-							<Stack width={200}></Stack>
-						</Hidden>
+						
 						<motion.div
 							className="container"
 							style={{
@@ -185,20 +182,10 @@ const Home: NextPage = () => {
 									letterSpacing: '5px',
 								}}
 								fontSize={{ xs: '27px', lg: '42px' }}>
-								<pre style={{ fontFamily: 'PhatBoy Slim', textAlign: 'center' }}>{t('homepage.title')}</pre>
+								<pre style={{ fontFamily: 'PhatBoy Slim', textAlign: 'center' }}>NUTRILABEL + <br /> Conectando salud y <br/>sabor en cada etiqueta</pre>
 							</Typography>
 						</motion.div>
-						<Hidden mdDown>
-							<Box sx={stylesGeneral.seccion.separationSeccion}>
-								<Box sx={stylesGeneral.seccion.containerNumber}>
-									<Box sx={stylesGeneral.seccion.number}>
-										<Typography paragraph sx={{ margin: '0' }}>
-											1
-										</Typography>
-									</Box>
-								</Box>
-							</Box>
-						</Hidden>
+						
 					</Box>
 					<Box position="absolute" left={{ xs: '10%', md: '15%' }} top="15%">
 						<AnimatePresence exitBeforeEnter>
@@ -246,7 +233,7 @@ const Home: NextPage = () => {
 					</Box>
 				</Box>
 			</Stack>
-
+			{/*
 			{
 				//Introduction
 			}
@@ -839,6 +826,7 @@ const Home: NextPage = () => {
 				</Box>
 			</ContainerSection>
 			<Footer />
+		*/}
 		</div>
 	);
 };

@@ -146,19 +146,19 @@ const Header: React.FC<IProps> = ({ bg }) => {
 			<Box position="fixed" width="100%" bgcolor={bg} zIndex={6}>
 				<Stack
 					direction={['column', 'column', 'column', 'row']}
-					justifyContent="space-between"
+					justifyContent="center"
 					sx={styles.container}
 					alignItems="center">
 					<Box
 						sx={{
-							ml: { xs: 'calc(100% - 95%)' },
+							ml: { xs: 'calc(100% - 120%)' },
 							display: 'flex',
 							alignItems: 'center',
 							justifyContent: 'space-between',
 							width: { xs: '100%', lg: 'auto' },
 						}}>
 						<Link href="/">
-							<Image width={150} height={17} src="/2022/03/logo_landian_letras_blanco.svg" />
+							<Image width={100} height={100} src="/2022/06/logo.png" />
 						</Link>
 						<Hidden mdUp>
 							<IconButton sx={{ mr: 2 }} onClick={() => setShowMenu(!showMenu)}>
@@ -174,19 +174,8 @@ const Header: React.FC<IProps> = ({ bg }) => {
 						mt={[2, 0]}
 						alignItems="center"
 						justifyContent="center"
-						sx={{ fontSize: '12.6px !important' }}>
-						<Link href="/">
-							<Typography
-								fontSize="12.6px"
-								sx={{
-									transition: 'all ease 0.5s',
-									'&:hover': {
-										transform: 'scale(1.2)',
-									},
-								}}>
-								{t('navbar.options.0')}
-							</Typography>
-						</Link>
+						sx={{ fontSize: '12.6px !important', marginLeft: "100px" }}>
+						
 						<Link href="/LNDA">
 							<Typography
 								fontSize="12.6px"
@@ -196,119 +185,9 @@ const Header: React.FC<IProps> = ({ bg }) => {
 										transform: 'scale(1.2)',
 									},
 								}}>
-								{t('navbar.options.1')}
+								Quienes Somos
 							</Typography>
 						</Link>
-
-						<Typography
-							fontSize="12.6px"
-							sx={{
-								display: 'flex',
-								gap: 1,
-								alignItems: 'center',
-								transition: 'all ease 0.5s',
-								'&:hover': {
-									transform: 'scale(1.2)',
-								},
-							}}
-							ref={anchorRef1}
-							id="composition-button"
-							aria-controls={open1 ? 'composition-menu' : undefined}
-							aria-expanded={open1 ? 'true' : undefined}
-							aria-haspopup="true"
-							onClick={handleToggle1}>
-							Blog <AiFillCaretDown size={10} />
-						</Typography>
-
-						<Popper open={open1} anchorEl={anchorRef1.current} role={undefined} placement="bottom-start" transition disablePortal>
-							{({ TransitionProps, placement }) => (
-								<Grow
-									{...TransitionProps}
-									style={{
-										transformOrigin: placement === 'bottom-start' ? 'left top' : 'left bottom',
-									}}>
-									<Paper sx={{ background: 'white', color: 'black' }}>
-										<ClickAwayListener onClickAway={handleClose1}>
-											<MenuList
-												autoFocusItem={open1}
-												id="composition-menu"
-												aria-labelledby="composition-button"
-												onKeyDown={handleListKeyDown1}>
-												<MenuItem>
-													<Link href="/news">
-														<Typography>{t('navbar.options.2')}</Typography>
-													</Link>
-												</MenuItem>
-												<MenuItem>
-													<Link href="/blog">
-														<Typography>Blog</Typography>
-													</Link>
-												</MenuItem>
-											</MenuList>
-										</ClickAwayListener>
-									</Paper>
-								</Grow>
-							)}
-						</Popper>
-						<Typography
-							fontSize="12.6px"
-							sx={{
-								display: 'flex',
-								gap: 1,
-								alignItems: 'center',
-								transition: 'all ease 0.5s',
-								'&:hover': {
-									transform: 'scale(1.2)',
-								},
-							}}
-							ref={anchorRef}
-							id="composition-button"
-							aria-controls={open ? 'composition-menu' : undefined}
-							aria-expanded={open ? 'true' : undefined}
-							aria-haspopup="true"
-							onClick={handleToggle}>
-							{t('navbar.options.3')} <AiFillCaretDown size={10} />
-						</Typography>
-						<Popper open={open} anchorEl={anchorRef.current} role={undefined} placement="bottom-start" transition disablePortal>
-							{({ TransitionProps, placement }) => (
-								<Grow
-									{...TransitionProps}
-									style={{
-										transformOrigin: placement === 'bottom-start' ? 'left top' : 'left bottom',
-									}}>
-									<Paper sx={{ background: 'white', color: 'black' }}>
-										<ClickAwayListener onClickAway={handleClose}>
-											<MenuList
-												autoFocusItem={open}
-												id="composition-menu"
-												aria-labelledby="composition-button"
-												onKeyDown={handleListKeyDown}>
-												<MenuItem>
-													<a
-														href={`/2022/03/${
-															router.locale === 'en-US' ? 'whitepaper-EN_8-07-2022.pdf' : 'whitepaper-ES_8-07-2022.pdf'
-														}`}
-														target="_blank"
-														rel="noopener noreferrer">
-														<Typography>Whitepaper</Typography>
-													</a>
-												</MenuItem>
-												<MenuItem>
-													<a
-														href={`/2022/03/${
-															router.locale === 'en-US' ? 'litepaper-EN_8-07-2022.pdf' : 'litepaper-ES_8-07-2022.pdf'
-														}`}
-														target="_blank"
-														rel="noopener noreferrer">
-														<Typography>Litepaper</Typography>
-													</a>
-												</MenuItem>
-											</MenuList>
-										</ClickAwayListener>
-									</Paper>
-								</Grow>
-							)}
-						</Popper>
 						<Link href="/#">
 							<Typography
 								fontSize="12.6px"
@@ -318,7 +197,7 @@ const Header: React.FC<IProps> = ({ bg }) => {
 										transform: 'scale(1.2)',
 									},
 								}}>
-								{t('navbar.options.4')}
+								Misión
 							</Typography>
 						</Link>
 						<Link href="/contact">
@@ -330,32 +209,59 @@ const Header: React.FC<IProps> = ({ bg }) => {
 										transform: 'scale(1.2)',
 									},
 								}}>
-								{t('navbar.options.5')}
+								Visión
 							</Typography>
 						</Link>
-						<Hidden lgDown>
-							<ButtonLocale />
-						</Hidden>
+						<Link href="/contact">
+							<Typography
+								fontSize="12.6px"
+								sx={{
+									transition: 'all ease 0.5s',
+									'&:hover': {
+										transform: 'scale(1.2)',
+									},
+								}}>
+								Politicas
+							</Typography>
+						</Link>
+						<Link href="/contact">
+							<Typography
+								fontSize="12.6px"
+								sx={{
+									transition: 'all ease 0.5s',
+									'&:hover': {
+										transform: 'scale(1.2)',
+									},
+								}}>
+								Organigrama
+							</Typography>
+						</Link>
+						<Link href="/contact">
+							<Typography
+								fontSize="12.6px"
+								sx={{
+									transition: 'all ease 0.5s',
+									'&:hover': {
+										transform: 'scale(1.2)',
+									},
+								}}>
+								Objetivos
+							</Typography>
+						</Link>
+						<Link href="/contact">
+							<Typography
+								fontSize="12.6px"
+								sx={{
+									transition: 'all ease 0.5s',
+									'&:hover': {
+										transform: 'scale(1.2)',
+									},
+								}}>
+								Estrategias
+							</Typography>
+						</Link>
 					</Stack>
-					<Hidden lgUp>
-						<Stack mt={1} display={showMenu ? 'flex' : 'none'}>
-							<ButtonLocale />
-						</Stack>
-					</Hidden>
-					<Stack
-						display={showMenu ? 'flex' : 'none'}
-						direction="column"
-						alignItems="center"
-						justifyContent="center"
-						height="100%"
-						gap="5px"
-						width={{ xs: 'auto', md: '50%', lg: 'auto' }}
-						mt={{ xs: 2, lg: 0 }}>
-						<Paper sx={styles.paper}>1 Landian Token (LNDA) = $0.41</Paper>
-						<a href="https://swap.landian.io/#/home" target="_blank" style={{ width: '100%' }}>
-							<Paper sx={styles.blackpaper}>{t('buy.buy')}</Paper>
-						</a>
-					</Stack>
+
 				</Stack>
 			</Box>
 		</header>
