@@ -6,7 +6,7 @@ const SEO = ({ title }: { title: string }) => {
 		<Head>
 			<title>{title} - Landian</title>
 			<meta property="og:type" content="website" />
-			<meta property="og:title" content={`${title} - Landian`} />
+			<meta property="og:title" content={`${title} - NutriLabel +`} />
 			
 			<meta name="twitter:data1" content="7 minutes" />
 			<meta property="og:url" content="https://www.landian.io/" />
