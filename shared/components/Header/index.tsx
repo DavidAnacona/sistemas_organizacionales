@@ -176,7 +176,7 @@ const Header: React.FC<IProps> = ({ bg }) => {
 						justifyContent="center"
 						sx={{ fontSize: '12.6px !important', marginLeft: "100px" }}>
 						
-						<Link href="/LNDA">
+						<Link href="/">
 							<Typography
 								fontSize="12.6px"
 								sx={{
@@ -200,7 +200,7 @@ const Header: React.FC<IProps> = ({ bg }) => {
 								Misión
 							</Typography>
 						</Link>
-						<Link href="/contact">
+						<Link href="/c">
 							<Typography
 								fontSize="12.6px"
 								sx={{
@@ -212,7 +212,7 @@ const Header: React.FC<IProps> = ({ bg }) => {
 								Visión
 							</Typography>
 						</Link>
-						<Link href="/contact">
+						<Link href="/">
 							<Typography
 								fontSize="12.6px"
 								sx={{
@@ -224,7 +224,7 @@ const Header: React.FC<IProps> = ({ bg }) => {
 								Politicas
 							</Typography>
 						</Link>
-						<Link href="/contact">
+						<Link href="/">
 							<Typography
 								fontSize="12.6px"
 								sx={{
@@ -236,7 +236,7 @@ const Header: React.FC<IProps> = ({ bg }) => {
 								Organigrama
 							</Typography>
 						</Link>
-						<Link href="/contact">
+						<Link href="/">
 							<Typography
 								fontSize="12.6px"
 								sx={{
@@ -248,7 +248,7 @@ const Header: React.FC<IProps> = ({ bg }) => {
 								Objetivos
 							</Typography>
 						</Link>
-						<Link href="/contact">
+						<Link href="/">
 							<Typography
 								fontSize="12.6px"
 								sx={{
