@@ -36,48 +36,7 @@ const Home: NextPage = () => {
 	const { t } = useTranslation();
 	// ? animation
 
-	const medium = useMediaQuery('(max-width:1190px)');
-	const small = useMediaQuery('(max-width:899px)');
-	const dwarf = useMediaQuery('(max-width:450px)');
-
 	const stylesGeneral = useStyles();
-
-	const AnimationIntroduction = {
-		...defaultOptionsGlobal,
-		animationData: animationIntroduction,
-	};
-
-	const AnimationTechnology = {
-		...defaultOptionsGlobal,
-		animationData: animationTechnology,
-	};
-
-	const AnimationEcosystem = {
-		...defaultOptionsGlobal,
-		animationData: animationEcosystem,
-	};
-
-	const AnimationEconomics = {
-		...defaultOptionsGlobal,
-		animationData: animationEconomics,
-	};
-	const AnimationConnection = {
-		...defaultOptionsGlobal,
-		animationData: animationConnection,
-	};
-	const AnimationFuture = {
-		...defaultOptionsGlobal,
-		animationData: animationFuture,
-	};
-	const AnimationTeam = {
-		...defaultOptionsGlobal,
-		animationData: animationTeam,
-	};
-
-	const AnimationLnda = {
-		...defaultOptionsGlobal,
-		animationData: animationLnda,
-	};
 	const classes = {
 		input: {
 			width: '80%',
@@ -233,14 +192,6 @@ const Home: NextPage = () => {
 				<Box></Box>
 				<Box></Box>
 				<Hidden mdDown>
-					{/*
-				alignSelf: 'center',
-			justifySelf: "center",
-			borderRadius: '50%',
-			overflow: 'hidden',
-			width: { xs: '90px', md: '110px', lg: '130px' },
-			height: { xs: '90px', md: '110px', lg: '130px' },
-		*/}
 					<Box sx={{width: "350px", height: "350px", alignSelf: "center", borderRadius: "50%", overflow: "hidden"}}>
 						<Image src="/2022/06/imagen1.jpg" layout="responsive" width={20} height={20} />
 					</Box>
