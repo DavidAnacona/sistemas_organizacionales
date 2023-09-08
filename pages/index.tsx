@@ -214,6 +214,58 @@ const Home: NextPage = () => {
 				</Box>
 				<Box></Box>
 			</ContainerSection>
+			<ContainerSection step={2}>
+				<Box></Box>
+				<Box></Box>
+				<Box textAlign={{ xs: 'center', md: 'left' }} px={4} top={0} sx={{ alignSelf: 'center' }}>
+					<Typography sx={stylesGeneral.seccion.titleSeccion2}>Misión</Typography>
+					
+					<Box sx={{ marginTop: '25px' }}>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "right"}}>
+						Nuestra misión es transformar la forma en que las personas  <br /> 
+						compran alimentos al ofrecer acceso a información nutricional  <br /> 
+						precisa y consejos de salud en el momento de la compra.  <br /> 
+						Buscamos empoderar a nuestros clientes para que tomen  <br /> 
+						decisiones alimenticias más conscientes y mejoren su bienestar.
+						</Typography>
+						
+					</Box>
+				</Box>
+				<Hidden mdDown>
+					<Box sx={{width: "350px", height: "350px", alignSelf: "center", borderRadius: "50%", overflow: "hidden"}}>
+						<Image src="/2022/06/imagen2.jpg" layout="responsive" width={20} height={20} />
+					</Box>
+				</Hidden>
+				<Box></Box>
+			</ContainerSection>
+			<ContainerSection step={2}>
+				<Box></Box>
+				<Box></Box>
+				<Hidden mdDown>
+					<Box sx={{width: "350px", height: "350px", alignSelf: "center", borderRadius: "50%", overflow: "hidden"}}>
+						<Image src="/2022/06/imagen3.jpg" layout="responsive" width={20} height={20} />
+					</Box>
+				</Hidden>
+
+				<Box textAlign={{ xs: 'center', md: 'left' }} px={4} top={0} sx={{ alignSelf: 'center' }}>
+					<Typography sx={stylesGeneral.seccion.titleSeccion}>Visión</Typography>
+					
+					<Box sx={{ marginTop: '25px' }}>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5 }}>
+						Nuestra visión es convertirnos en el líder reconocido en <br />
+						la industria de comestibles, brindando a los consumidores <br />
+						la mejor experiencia de compra posible mediante la innovación <br />
+						tecnológica y la promoción de un estilo de vida saludable. <br />
+						Queremos ser la primera opción de los consumidores cuando <br />
+						busquen información nutricional y consejos de salud mientras <br />
+						compran alimentos, De igual forma realizar un crecimiento<br />
+						 a nivel nacional llegando a todos los rincones del país.
+						</Typography>
+						
+					</Box>
+				</Box>
+				<Box></Box>
+			</ContainerSection>
 			{/*
 			{
 				//Technology

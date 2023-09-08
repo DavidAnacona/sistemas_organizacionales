@@ -54,6 +54,13 @@ export const useStyles = () => ({
 			fontSize: { xs: '22px', md: '42px' },
 			fontWeight: 500,
 		},
+		titleSeccion2: {
+			textAlign: 'right',
+			marginBottom: '15px',
+			fontSize: { xs: '22px', md: '42px' },
+			fontWeight: 500,
+			
+		},
 		containerRelatedLink: {
 			display: 'flex',
 			marginTop: '15px',
