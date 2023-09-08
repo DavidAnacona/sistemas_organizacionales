@@ -5,7 +5,7 @@ import Header from 'shared/components/Header';
 import MediaIcons from 'shared/components/MediaIcons';
 import Footer from 'shared/components/Footer';
 import Lottie from 'react-lottie';
-import animationIntroduction from '../public/2022/03/lf20_fhtw3yus.json';
+import animationIntroduction from '../public/2022/06/imagen1.jpg';
 import animationTechnology from '../public/2022/03/tecnology_use.json';
 import animationEcosystem from '../public/2022/03/100788-builds3.json';
 import animationEconomics from '../public/2022/03/101035-layer8.json';
@@ -118,15 +118,7 @@ const Home: NextPage = () => {
 						direction={{ xs: 'column', md: 'row-reverse' }}
 						justifyContent={{ xs: 'center', md: 'space-between' }}
 						width="100%">
-						<Box sx={stylesGeneral.seccion.separationSeccion}>
-							<Box sx={stylesGeneral.seccion.containerNumber}>
-								<Box sx={stylesGeneral.seccion.number}>
-									<Typography paragraph sx={{ margin: '0' }}>
-										{step}
-									</Typography>
-								</Box>
-							</Box>
-						</Box>
+						
 						{children}
 					</Stack>
 				</motion.div>
@@ -233,63 +225,45 @@ const Home: NextPage = () => {
 					</Box>
 				</Box>
 			</Stack>
-			{/*
+			
 			{
 				//Introduction
 			}
 			<ContainerSection step={2}>
+				<Box></Box>
+				<Box></Box>
 				<Hidden mdDown>
-					<Box sx={dwarf ? stylesGeneral.seccion.dwarf : stylesGeneral.seccion.containerAnimation}>
-						<Lottie options={AnimationIntroduction} />
+					{/*
+				alignSelf: 'center',
+			justifySelf: "center",
+			borderRadius: '50%',
+			overflow: 'hidden',
+			width: { xs: '90px', md: '110px', lg: '130px' },
+			height: { xs: '90px', md: '110px', lg: '130px' },
+		*/}
+					<Box sx={{width: "350px", height: "350px", alignSelf: "center", borderRadius: "50%", overflow: "hidden"}}>
+						<Image src="/2022/06/imagen1.jpg" layout="responsive" width={20} height={20} />
 					</Box>
 				</Hidden>
 
 				<Box textAlign={{ xs: 'center', md: 'left' }} px={4} top={0} sx={{ alignSelf: 'center' }}>
-					<Typography sx={stylesGeneral.seccion.titleSeccion}>{t('homepage.Introduction.title')}</Typography>
-					<Content seccion="Introduction" numberWords={507}></Content>
+					<Typography sx={stylesGeneral.seccion.titleSeccion}>Quienes somos</Typography>
+					
 					<Box sx={{ marginTop: '25px' }}>
-						<Typography paragraph sx={{ fontWeight: '500', fontSize: '16.8px', fontFamily: 'Oswald', lineHeight: 1 }}>
-							{t('homepage.seccionLink')}
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5 }}>
+						Somos una empresa dedicada a mejorar la experiencia de <br /> compra 
+						de alimentos al proporcionar a nuestros clientes <br /> información 
+						nutricional detallada y consejos de salud en <br />tiempo real a través 
+						de etiquetas inteligentes y una  <br />aplicación móvil innovadora.
+						Nos esforzamos por ayudar  <br />a las personas a tomar decisiones
+						alimenticias más  <br />informadas y saludables.
 						</Typography>
-						<Box sx={stylesGeneral.seccion.containerRelatedLink}>
-							<Typography paragraph sx={stylesGeneral.seccion.firstRelatedLink}>
-								{t('homepage.Introduction.relatedLink.0')}
-							</Typography>
-							<Typography sx={stylesGeneral.seccion.secondRelatedLink}>{t('homepage.Introduction.relatedLink.1')}</Typography>
-						</Box>
-						<Box>
-							<Typography paragraph sx={stylesGeneral.seccion.firstRelatedLink}>
-								{t('homepage.Introduction.relatedLink.2')}
-							</Typography>
-						</Box>
-						<Box>
-							<Typography paragraph sx={stylesGeneral.seccion.secondRelatedLink}>
-								{t('homepage.Introduction.relatedLink.3')}
-							</Typography>
-						</Box>
-						<Box sx={stylesGeneral.seccion.containerInformation}>
-							<Typography paragraph sx={stylesGeneral.seccion.information}>
-								{t('homepage.information')}
-							</Typography>
-							<Box>
-								<WhitePapperBtn />
-							</Box>
-						</Box>
+						
 					</Box>
 				</Box>
-
-				<Hidden mdUp>
-					<Box sx={dwarf ? stylesGeneral.seccion.dwarf : stylesGeneral.seccion.containerAnimation}>
-						<Lottie options={AnimationIntroduction} />
-					</Box>
-				</Hidden>
-				<Box sx={stylesGeneral.seccion.nameSeccion}>
-					<Typography paragraph sx={stylesGeneral.seccion.textNameSeccion}>
-						{t('homepage.seccion.1')}
-					</Typography>
-				</Box>
+				<Box></Box>
 			</ContainerSection>
-
+			{/*
 			{
 				//Technology
 			}

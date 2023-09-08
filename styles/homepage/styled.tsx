@@ -79,7 +79,10 @@ export const useStyles = () => ({
 		},
 		containerAnimation: {
 			alignSelf: 'center',
-			width: { xs: '450px', md: '550px' },
+			borderRadius: '50%',
+			overflow: 'hidden',
+			width: { xs: '90px', md: '110px', lg: '130px' },
+			height: { xs: '90px', md: '110px', lg: '130px' },
 		},
 		containerEconomicsTags: {
 			display: 'flex',
@@ -152,6 +155,7 @@ export const useStyles = () => ({
 		dwarf: {
 			alignSelf: 'center',
 			width: '230px',
+			
 		},
 	},
 });

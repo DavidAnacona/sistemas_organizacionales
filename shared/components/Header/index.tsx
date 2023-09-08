@@ -188,7 +188,7 @@ const Header: React.FC<IProps> = ({ bg }) => {
 								Quienes Somos
 							</Typography>
 						</Link>
-						<Link href="/#">
+						<Link href="/">
 							<Typography
 								fontSize="12.6px"
 								sx={{
@@ -200,7 +200,7 @@ const Header: React.FC<IProps> = ({ bg }) => {
 								Misión
 							</Typography>
 						</Link>
-						<Link href="/c">
+						<Link href="/">
 							<Typography
 								fontSize="12.6px"
 								sx={{
