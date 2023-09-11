@@ -61,6 +61,13 @@ export const useStyles = () => ({
 			fontWeight: 500,
 			
 		},
+		titleSeccion3: {
+			textAlign: 'center',
+			marginBottom: '15px',
+			fontSize: { xs: '22px', md: '42px' },
+			fontWeight: 500,
+			
+		},
 		containerRelatedLink: {
 			display: 'flex',
 			marginTop: '15px',
@@ -126,6 +133,10 @@ export const useStyles = () => ({
 			overflow: 'hidden',
 			width: { xs: '90px', md: '110px', lg: '130px' },
 			height: { xs: '90px', md: '110px', lg: '130px' },
+		},
+		containerImage2: {
+			borderRadius: '20px',
+			overflow: 'hidden',
 		},
 		memberName: {
 			textAlign: 'center',

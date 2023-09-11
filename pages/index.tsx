@@ -27,6 +27,8 @@ import Count from 'shared/components/Count';
 import SEO from 'shared/components/SEO';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Mapa from "pages/pruebamapa"
+import backgroundSeccion from '../public/2022/03/logo-linear-fondo-dark.svg';
+import Organigrama from "../public/2022/06/organigrama.png"
 
 const defaultOptionsGlobal = {
 	loop: true,
@@ -103,7 +105,10 @@ const Home: NextPage = () => {
 						pl={{ xs: 0, md: '60px', xl: 0 }}
 						direction={{ xs: 'column', md: 'column' }}
 						justifyContent={{ xs: 'center', md: 'center' }}
-						width="100%">
+						width="100vw"
+						height="100vh"
+						alignItems={"center"}
+						alignContent={"center"}>
 						
 						{children}
 					</Stack>
@@ -231,7 +236,7 @@ const Home: NextPage = () => {
 			</ContainerSectionCus>
 			<ContainerSectionCus step={2}>
 			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
-					<Box sx={{ width: "480px", height: "220px"}}>
+					<Box sx={{ width: "480px", height: "220px", marginRight: "200px"}}>
 						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>FORTALEZA</strong></Typography>
 						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
 						<strong>Tecnología Innovadora:</strong> La integración de 
@@ -267,7 +272,7 @@ const Home: NextPage = () => {
 			</ContainerSectionCus>
 			<ContainerSectionCus step={2}>
 			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
-					<Box sx={{ width: "480px", height: "220px"}}>
+					<Box sx={{ width: "480px", height: "220px", marginRight: "200px"}}>
 						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>FORTALEZA</strong></Typography>
 						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
 						<strong>Recopilación de Datos: </strong> 
@@ -296,7 +301,7 @@ const Home: NextPage = () => {
 			</ContainerSectionCus>
 			<ContainerSectionCus step={2}>
 			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
-					<Box sx={{ width: "480px", height: "220px"}}>
+					<Box sx={{ width: "480px", height: "220px", marginRight: "200px"}}>
 						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>FORTALEZA</strong></Typography>
 						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
 						<strong>Innovación: </strong> 
@@ -325,7 +330,7 @@ const Home: NextPage = () => {
 			</ContainerSectionCus>
 			<ContainerSectionCus step={2}>
 			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
-					<Box sx={{ width: "480px", height: "220px"}}>
+					<Box sx={{ width: "480px", height: "220px", marginRight: "200px"}}>
 						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>FORTALEZA</strong></Typography>
 						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
 						<strong>Enfoque en la Salud: </strong> 
@@ -354,7 +359,7 @@ const Home: NextPage = () => {
 			</ContainerSectionCus>
 			<ContainerSectionCus step={2}>
 			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
-					<Box sx={{ width: "480px", height: "220px"}}>
+					<Box sx={{ width: "480px", height: "220px", marginRight: "200px"}}>
 						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>FORTALEZA</strong></Typography>
 						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
 						<strong>Potencial para Fidelización: </strong> 
@@ -383,7 +388,7 @@ const Home: NextPage = () => {
 			</ContainerSectionCus>
 			<ContainerSectionCus step={2}>
 			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
-					<Box sx={{ width: "480px", height: "220px"}}>
+					<Box sx={{ width: "480px", height: "220px", marginRight: "200px"}}>
 						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>FORTALEZA</strong></Typography>
 						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
 						<strong>Enfoque en la Salud: </strong> 
@@ -412,7 +417,7 @@ const Home: NextPage = () => {
 			</ContainerSectionCus>
 			<ContainerSectionCus step={2}>
 			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
-					<Box sx={{ width: "480px", height: "220px"}}>
+					<Box sx={{ width: "480px", height: "220px", marginRight: "200px"}}>
 						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>FORTALEZA</strong></Typography>
 						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
 						<strong>Tecnología Innovadora: </strong> 
@@ -441,7 +446,7 @@ const Home: NextPage = () => {
 			</ContainerSectionCus>
 			<ContainerSectionCus step={2}>
 			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
-					<Box sx={{ width: "480px", height: "220px"}}>
+					<Box sx={{ width: "480px", height: "220px", marginRight: "200px"}}>
 						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>FORTALEZA</strong></Typography>
 						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
 						<strong>Innovación: </strong> 
@@ -470,7 +475,7 @@ const Home: NextPage = () => {
 			</ContainerSectionCus>
 			<ContainerSectionCus step={2}>
 			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
-					<Box sx={{ width: "480px", height: "220px"}}>
+					<Box sx={{ width: "480px", height: "220px", marginRight: "200px"}}>
 						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>FORTALEZA</strong></Typography>
 						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
 						<strong>Potencial para Fidelización: </strong> 
@@ -499,7 +504,7 @@ const Home: NextPage = () => {
 			</ContainerSectionCus>
 			<ContainerSectionCus step={2}>
 			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
-					<Box sx={{ width: "480px", height: "220px"}}>
+					<Box sx={{ width: "480px", height: "220px", marginRight: "200px"}}>
 						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>DEBILIDAD</strong></Typography>
 						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
 						<strong>Educación del Consumidor: </strong> 
@@ -528,7 +533,7 @@ const Home: NextPage = () => {
 			</ContainerSectionCus>
 			<ContainerSectionCus step={2}>
 			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
-					<Box sx={{ width: "480px", height: "220px"}}>
+					<Box sx={{ width: "480px", height: "220px", marginRight: "200px"}}>
 						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>DEBILIDAD</strong></Typography>
 						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
 						<strong>Privacidad de los Datos: </strong> 
@@ -557,7 +562,7 @@ const Home: NextPage = () => {
 			</ContainerSectionCus>
 			<ContainerSectionCus step={2}>
 			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
-					<Box sx={{ width: "480px", height: "220px"}}>
+					<Box sx={{ width: "480px", height: "220px", marginRight: "200px"}}>
 						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>DEBILIDAD</strong></Typography>
 						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
 						<strong>Costos Iniciales: </strong> 
@@ -586,7 +591,7 @@ const Home: NextPage = () => {
 			</ContainerSectionCus>
 			<ContainerSectionCus step={2}>
 			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
-					<Box sx={{ width: "480px", height: "220px"}}>
+					<Box sx={{ width: "480px", height: "220px", marginRight: "200px"}}>
 						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>DEBILIDAD</strong></Typography>
 						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
 						<strong>Competencia: </strong> 
@@ -694,6 +699,121 @@ const Home: NextPage = () => {
 				</Box>
 				<Box></Box>
 			</ContainerSection>
+			<Stack sx={{width: "99vw", height: "100vh", backgroundImage: `url('${backgroundSeccion.src}')`, backgroundPosition: 'center center', backgroundRepeat: 'no-repeat', backgroundSize: { xs: '90% auto', md: '650px auto' }, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
+						<Typography
+								sx={{
+									fontFamily: 'PhatBoy Slim',
+									fontWeight: 'bold',
+									textTransform: 'uppercase',
+									lineHeight: '1.1em',
+									letterSpacing: '5px',
+									
+								}}
+								fontSize={{ xs: '27px', lg: '42px' }}>
+								<pre style={{ fontFamily: 'PhatBoy Slim', textAlign: 'center' }}>POLITICAS GENERALES</pre>
+						</Typography>
+			</Stack>
+			<Stack sx={{width: "99vw", 
+			height: "100vh", 
+			backgroundImage: `url('${backgroundSeccion.src}')`, 
+			backgroundPosition: 'center center', 
+			backgroundRepeat: 'no-repeat', 
+			backgroundSize: { xs: '90% auto', md: '650px auto' }, 
+			display: "flex", flexDirection: "column", 
+			justifyContent: "center", alignItems: "center", marginTop: "100px"}}>
+				<Box sx={{display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center"}}>
+					<Box sx={{width: "350px", height: "400px", marginRight: "50px", textAlign: "center"}}>
+						<Typography sx={stylesGeneral.seccion.titleSeccion3}>Política de Privacidad de Datos:</Typography>
+					</Box>
+					
+					<Box sx={{ width: "500px", height: "400px"}}>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						En nuestra búsqueda de recopilar datos sobre las preferencias de compra de los clientes, nos comprometemos a proteger la privacidad de los datos de nuestros usuarios. Cumplimos con todas las regulaciones de privacidad de datos y mantenemos estrictos protocolos de seguridad para garantizar la confidencialidad de la información personal.
+						</Typography>
+					</Box>
+				</Box>
+				<Box sx={{display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", marginTop: "-100px"}}>
+					<Box sx={{width: "350px", height: "400px", marginRight: "50px", textAlign: "center"}}>
+						<Typography sx={stylesGeneral.seccion.titleSeccion3}>Política de Innovación Continua:</Typography>
+					</Box>
+					
+					<Box sx={{ width: "500px", height: "400px"}}>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						Valoramos la innovación y nos esforzamos por mantenernos a la vanguardia de la tecnología en la industria de comestibles. Fomentamos un ambiente de mejora continua en todas nuestras operaciones y estamos abiertos a adoptar nuevas tecnologías y enfoques para beneficiar a nuestros clientes.
+						</Typography>
+					</Box>
+				</Box>
+			</Stack>
+			<Stack sx={{width: "99vw", 
+			height: "100vh", 
+			backgroundImage: `url('${backgroundSeccion.src}')`, 
+			backgroundPosition: 'center center', 
+			backgroundRepeat: 'no-repeat', 
+			backgroundSize: { xs: '90% auto', md: '650px auto' }, 
+			display: "flex", flexDirection: "column", 
+			justifyContent: "center", alignItems: "center", marginTop: "100px"}}>
+				<Box sx={{display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center"}}>
+					<Box sx={{width: "350px", height: "400px", marginRight: "50px", textAlign: "center"}}>
+						<Typography sx={stylesGeneral.seccion.titleSeccion3}>Política de Colaboración Estratégica:</Typography>
+					</Box>
+					
+					<Box sx={{ width: "500px", height: "400px"}}>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						Creemos en el poder de las asociaciones estratégicas. Buscamos colaboraciones con fabricantes de alimentos saludables, nutricionistas y otros actores clave en la industria de la salud y la nutrición para ofrecer a nuestros clientes contenido y recomendaciones adicionales de alta calidad.
+						</Typography>
+					</Box>
+				</Box>
+				<Box sx={{display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", marginTop: "-100px"}}>
+					<Box sx={{width: "350px", height: "400px", marginRight: "50px", textAlign: "center"}}>
+						<Typography sx={stylesGeneral.seccion.titleSeccion3}>Política de Educación al Consumidor:</Typography>
+					</Box>
+					
+					<Box sx={{ width: "500px", height: "400px"}}>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						Reconocemos la importancia de educar a nuestros clientes sobre la tecnología NFC y los códigos QR en el contexto de compras de comestibles. Mantenemos un compromiso constante de proporcionar recursos educativos y campañas de marketing para garantizar que los compradores se sientan cómodos utilizando nuestras soluciones tecnológicas.
+						</Typography>
+					</Box>
+				</Box>
+			</Stack>
+			<Stack sx={{width: "99vw", 
+			height: "100vh", 
+			backgroundImage: `url('${backgroundSeccion.src}')`, 
+			backgroundPosition: 'center center', 
+			backgroundRepeat: 'no-repeat', 
+			backgroundSize: { xs: '90% auto', md: '650px auto' }, 
+			display: "flex", flexDirection: "column", 
+			justifyContent: "center", alignItems: "center", marginTop: "100px"}}>
+				<Box sx={{display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center"}}>
+					<Box sx={{width: "350px", height: "400px", marginRight: "50px", textAlign: "center"}}>
+						<Typography sx={stylesGeneral.seccion.titleSeccion3}>Política de Cumplimiento Regulatorio:</Typography>
+					</Box>
+					
+					<Box sx={{ width: "500px", height: "400px"}}>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						Cumplimos estrictamente con todas las regulaciones gubernamentales relacionadas con la recopilación de datos y la información nutricional en alimentos. Trabajamos en estrecha colaboración con las autoridades para garantizar el cumplimiento continuo y la transparencia en nuestras operaciones.
+						</Typography>
+					</Box>
+				</Box>
+			</Stack>
+			<Stack sx={{width: "99vw", height: "100vh", backgroundImage: `url('${backgroundSeccion.src}')`, backgroundPosition: 'center center', backgroundRepeat: 'no-repeat', backgroundSize: { xs: '90% auto', md: '650px auto' }, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
+						<Typography
+								sx={{
+									fontFamily: 'PhatBoy Slim',
+									fontWeight: 'bold',
+									textTransform: 'uppercase',
+									lineHeight: '1.1em',
+									letterSpacing: '5px',
+									
+								}}
+								fontSize={{ xs: '27px', lg: '42px' }}>
+								<pre style={{ fontFamily: 'PhatBoy Slim', textAlign: 'center' }}>ORGANIGRAMA</pre>
+						</Typography>
+			</Stack>
+			<Stack sx={{width: "99vw", height: "100vh", backgroundImage: `url('${backgroundSeccion.src}')`, backgroundPosition: 'center center', backgroundRepeat: 'no-repeat', backgroundSize: { xs: '90% auto', md: '650px auto' }, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
+				<Box sx={stylesGeneral.seccion.containerImage2}>
+					<Image width={1000} height={500} src="/2022/06/organigrama.png" />
+				</Box>
+			</Stack>
 			{/*
 			{
 				//Technology
