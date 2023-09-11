@@ -25,6 +25,8 @@ import { useViewportScroll, useTransform, motion, AnimatePresence } from 'framer
 import { useRouter } from 'next/router';
 import Count from 'shared/components/Count';
 import SEO from 'shared/components/SEO';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import Mapa from "pages/pruebamapa"
 
 const defaultOptionsGlobal = {
 	loop: true,
@@ -76,6 +78,31 @@ const Home: NextPage = () => {
 						pl={{ xs: 0, md: '60px', xl: 0 }}
 						direction={{ xs: 'column', md: 'row-reverse' }}
 						justifyContent={{ xs: 'center', md: 'space-between' }}
+						width="100%">
+						
+						{children}
+					</Stack>
+				</motion.div>
+			</Stack>
+		);
+	};
+	const ContainerSectionCus = ({ step = 1, children }: { step: number; children: React.ReactNode | React.ReactFragment }) => {
+		return (
+			<Stack sx={stylesGeneral.seccion.container}>
+				<motion.div
+					className="container"
+					style={{
+						y: rotate2,
+						transitionTimingFunction: 'cubic-bezier(0,.33,.07,1.03)',
+						transition: 'all ease 1s',
+						minHeight: '100vh',
+						display: 'flex',
+					}}
+					transition={{ duration: 1 }}>
+					<Stack
+						pl={{ xs: 0, md: '60px', xl: 0 }}
+						direction={{ xs: 'column', md: 'column' }}
+						justifyContent={{ xs: 'center', md: 'center' }}
 						width="100%">
 						
 						{children}
@@ -184,7 +211,408 @@ const Home: NextPage = () => {
 					</Box>
 				</Box>
 			</Stack>
-			
+			{
+			//Estrategias
+			}
+			<ContainerSectionCus step={2}>
+				<Box textAlign={{ xs: 'center', md: 'left' }} px={4} top={0} sx={{ alignSelf: 'center' }}>
+						<Typography
+								sx={{
+									fontFamily: 'PhatBoy Slim',
+									fontWeight: 'bold',
+									textTransform: 'uppercase',
+									lineHeight: '1.1em',
+									letterSpacing: '5px',
+								}}
+								fontSize={{ xs: '27px', lg: '42px' }}>
+								<pre style={{ fontFamily: 'PhatBoy Slim', textAlign: 'center' }}>FODA Y ESTRATEGIAS <br />FA, FO, DA Y DO</pre>
+						</Typography>
+				</Box>
+			</ContainerSectionCus>
+			<ContainerSectionCus step={2}>
+			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "480px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>FORTALEZA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Tecnología Innovadora:</strong> La integración de 
+						etiquetas inteligentes utilizando NFC o 
+						códigos QR muestra una clara inversión en 
+						tecnología avanzada, se puede atraer a un 
+						público interesado en la salud y la información nutricional.
+						</Typography>
+					</Box>
+					<Box sx={{ width: "450px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>AMENAZA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Competencia Constante: </strong> El mercado 
+						de comestibles es altamente competitivo, y otros 
+						competidores pueden copiar la tecnología o estrategias.
+						</Typography>
+					</Box>
+    			</Box>
+				<Box sx={{width:"600px", height: "30px", alignSelf: "center", borderBottom: "1px solid #BDBDBD", borderLeft: "1px solid #BDBDBD", borderRight: "1px solid #BDBDBD", borderRadius: "2px"}}></Box>
+				<Box sx={{ width:"0.5px", height: "30px", alignSelf: "center", borderLeft: "1px solid #BDBDBD"}}></Box>
+				<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "550px", height: "250px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>ESTRATEGIA FA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Desarrollo Tecnológico Continuo: </strong> 
+						Invertir en un equipo de desarrollo tecnológico sólido para mantener y 
+						mejorar constantemente las etiquetas inteligentes y la aplicación. 
+						Esto ayudará a enfrentar la amenaza de la competencia constante y 
+						garantizar un funcionamiento sin problemas.
+						</Typography>
+					</Box>
+    			</Box>
+			</ContainerSectionCus>
+			<ContainerSectionCus step={2}>
+			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "480px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>FORTALEZA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Recopilación de Datos: </strong> 
+						La tecnología NFC y los códigos QR pueden proporcionar datos valiosos sobre las preferencias de compra de los clientes, lo que ayudará a tomar decisiones informadas sobre la gestión de inventario y la personalización de ofertas.
+						</Typography>
+					</Box>
+					<Box sx={{ width: "450px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>AMENAZA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Regulaciones y Cumplimiento: </strong> 
+						Se debe estar al tanto de las regulaciones relacionadas con la recopilación de datos y la información nutricional en alimentos.
+						</Typography>
+					</Box>
+    			</Box>
+				<Box sx={{width:"600px", height: "30px", alignSelf: "center", borderBottom: "1px solid #BDBDBD", borderLeft: "1px solid #BDBDBD", borderRight: "1px solid #BDBDBD", borderRadius: "2px"}}></Box>
+				<Box sx={{ width:"0.5px", height: "30px", alignSelf: "center", borderLeft: "1px solid #BDBDBD"}}></Box>
+				<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "550px", height: "250px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>ESTRATEGIA FA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Mantenimiento de la Privacidad de Datos: </strong> 
+						Establecer políticas de privacidad robustas y medidas de seguridad para abordar las preocupaciones de privacidad de los datos y cumplir con las regulaciones. Esto permitirá minimizar el riesgo de sanciones legales y la pérdida de confianza de los clientes.
+						</Typography>
+					</Box>
+    			</Box>
+			</ContainerSectionCus>
+			<ContainerSectionCus step={2}>
+			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "480px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>FORTALEZA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Innovación: </strong> 
+						El concepto único de proporcionar información nutricional detallada en tiempo real a través de etiquetas inteligentes y recetas personalizadas puede destacar en el mercado de comestibles.
+						</Typography>
+					</Box>
+					<Box sx={{ width: "450px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>AMENAZA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Cambios en las Tendencias de Salud: </strong> 
+						Las tendencias de salud pueden cambiar rápidamente, por lo que se debe estar preparado para adaptarse a las preferencias cambiantes de los consumidores. 
+						</Typography>
+					</Box>
+    			</Box>
+				<Box sx={{width:"600px", height: "30px", alignSelf: "center", borderBottom: "1px solid #BDBDBD", borderLeft: "1px solid #BDBDBD", borderRight: "1px solid #BDBDBD", borderRadius: "2px"}}></Box>
+				<Box sx={{ width:"0.5px", height: "30px", alignSelf: "center", borderLeft: "1px solid #BDBDBD"}}></Box>
+				<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "550px", height: "250px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>ESTRATEGIA FA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Adaptabilidad Nutricional Tecnológica: </strong> 
+						Para mantener la relevancia ante tendencias de salud cambiantes, las etiquetas inteligentes permiten adaptaciones rápidas, como destacar productos sin gluten ante demandas crecientes. Al responder velozmente a nuevos enfoques nutricionales, los consumidores ven la tienda como fuente confiable en salud y nutrición. La adaptabilidad tecnológica combate los cambios en preferencias de salud.
+						</Typography>
+					</Box>
+    			</Box>
+			</ContainerSectionCus>
+			<ContainerSectionCus step={2}>
+			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "480px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>FORTALEZA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Enfoque en la Salud: </strong> 
+						En un mundo cada vez más consciente de la salud, el enfoque en proporcionar consejos de salud puede resonar con consumidores preocupados por su bienestar.
+						</Typography>
+					</Box>
+					<Box sx={{ width: "450px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>AMENAZA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Rechazo Tecnológico: </strong> 
+						A pesar del auge tecnológico, algunos consumidores, por desconfianza o preferencia, evitan nuevos métodos de compra, limitando la penetración de mercado de la tienda.
+						</Typography>
+					</Box>
+    			</Box>
+				<Box sx={{width:"600px", height: "30px", alignSelf: "center", borderBottom: "1px solid #BDBDBD", borderLeft: "1px solid #BDBDBD", borderRight: "1px solid #BDBDBD", borderRadius: "2px"}}></Box>
+				<Box sx={{ width:"0.5px", height: "30px", alignSelf: "center", borderLeft: "1px solid #BDBDBD"}}></Box>
+				<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "550px", height: "250px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>ESTRATEGIA FA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Clínicas Tecnológicas de Bienestar: </strong>
+						La tienda ofrece talleres para enseñar sobre nutrición, uso de etiquetas NFC y la app, fortaleciendo su imagen como líder en bienestar e innovación. Estas clínicas reducen barreras tecnológicas y refuerzan el compromiso con la salud, contrarrestando el rechazo tecnológico. 
+						</Typography>
+					</Box>
+    			</Box>
+			</ContainerSectionCus>
+			<ContainerSectionCus step={2}>
+			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "480px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>FORTALEZA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Potencial para Fidelización: </strong> 
+						La aplicación móvil para recetas basadas en las etiquetas inteligentes puede fomentar la lealtad de los clientes y aumentar las ventas recurrentes
+						</Typography>
+					</Box>
+					<Box sx={{ width: "450px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>AMENAZA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Dependencia Tecnológica: </strong> 
+						Fallos en etiquetas NFC o la app pueden dañar la reputación de la tienda, y ciberataques comprometen la seguridad del cliente.
+						</Typography>
+					</Box>
+    			</Box>
+				<Box sx={{width:"600px", height: "30px", alignSelf: "center", borderBottom: "1px solid #BDBDBD", borderLeft: "1px solid #BDBDBD", borderRight: "1px solid #BDBDBD", borderRadius: "2px"}}></Box>
+				<Box sx={{ width:"0.5px", height: "30px", alignSelf: "center", borderLeft: "1px solid #BDBDBD"}}></Box>
+				<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "550px", height: "250px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>ESTRATEGIA FA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Plan de Recompensas de Respaldo: </strong>
+						Ante fallos técnicos, se activaría un "Plan de Recompensas de Respaldo" ofreciendo bonificaciones a los usuarios. La app incluiría una sección para reportar problemas, recompensando las notificaciones. Esta estrategia anticipa problemas tecnológicos y utiliza incentivos para fortalecer la lealtad y minimizar impactos negativos.
+						</Typography>
+					</Box>
+    			</Box>
+			</ContainerSectionCus>
+			<ContainerSectionCus step={2}>
+			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "480px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>FORTALEZA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Enfoque en la Salud: </strong> 
+						En un mundo cada vez más consciente de la salud, el enfoque en proporcionar consejos de salud puede resonar con consumidores preocupados por su bienestar.
+						</Typography>
+					</Box>
+					<Box sx={{ width: "450px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>OPORTUNIDAD</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Segmentación de Mercado: </strong> 
+						Identificamos segmentos de mercado específicos interesados en la información nutricional detallada y los consejos de salud. 
+						</Typography>
+					</Box>
+    			</Box>
+				<Box sx={{width:"600px", height: "30px", alignSelf: "center", borderBottom: "1px solid #BDBDBD", borderLeft: "1px solid #BDBDBD", borderRight: "1px solid #BDBDBD", borderRadius: "2px"}}></Box>
+				<Box sx={{ width:"0.5px", height: "30px", alignSelf: "center", borderLeft: "1px solid #BDBDBD"}}></Box>
+				<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "550px", height: "250px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>ESTRATEGIA FO</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Marketing Especializado: </strong>
+						Utilizar tu enfoque en la salud y la información nutricional para dirigirse a segmentos de mercado específicos interesados en estos aspectos. Se puede crear campañas de marketing dirigidas a personas preocupadas por su bienestar y que buscan información detallada sobre los alimentos que consumen.
+						</Typography>
+					</Box>
+    			</Box>
+			</ContainerSectionCus>
+			<ContainerSectionCus step={2}>
+			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "480px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>FORTALEZA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Tecnología Innovadora: </strong> 
+						La integración de etiquetas inteligentes utilizando NFC o códigos QR muestra una clara inversión en tecnología avanzada, se puede atraer a un público interesado en la salud y la información nutricional.
+						</Typography>
+					</Box>
+					<Box sx={{ width: "450px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>OPORTUNIDAD</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Expansión de Servicios: </strong> 
+						Se podría expandir los servicios para incluir opciones de entrega a domicilio o recogida en la tienda basadas en las preferencias del cliente.
+						</Typography>
+					</Box>
+    			</Box>
+				<Box sx={{width:"600px", height: "30px", alignSelf: "center", borderBottom: "1px solid #BDBDBD", borderLeft: "1px solid #BDBDBD", borderRight: "1px solid #BDBDBD", borderRadius: "2px"}}></Box>
+				<Box sx={{ width:"0.5px", height: "30px", alignSelf: "center", borderLeft: "1px solid #BDBDBD"}}></Box>
+				<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "550px", height: "250px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>ESTRATEGIA FO</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Expansión de Servicios: </strong>
+						Aprovechar la oportunidad de ofrecer opciones de entrega a domicilio o recogida en la tienda, especialmente para aquellos clientes que buscan conveniencia y una experiencia personalizada.
+						</Typography>
+					</Box>
+    			</Box>
+			</ContainerSectionCus>
+			<ContainerSectionCus step={2}>
+			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "480px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>FORTALEZA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Innovación: </strong> 
+						El concepto único de proporcionar información nutricional detallada en tiempo real a través de etiquetas inteligentes y recetas personalizadas puede destacar en el mercado de comestibles.
+						</Typography>
+					</Box>
+					<Box sx={{ width: "450px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>OPORTUNIDAD</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Colaboraciones Estratégicas: </strong> 
+						Considerar asociarnos con fabricantes de alimentos saludables o nutricionistas para ofrecer contenido y recomendaciones adicionales. 
+						</Typography>
+					</Box>
+    			</Box>
+				<Box sx={{width:"600px", height: "30px", alignSelf: "center", borderBottom: "1px solid #BDBDBD", borderLeft: "1px solid #BDBDBD", borderRight: "1px solid #BDBDBD", borderRadius: "2px"}}></Box>
+				<Box sx={{ width:"0.5px", height: "30px", alignSelf: "center", borderLeft: "1px solid #BDBDBD"}}></Box>
+				<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "550px", height: "250px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>ESTRATEGIA FO</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Alianzas Estratégicas: </strong>
+						Colaborar con fabricantes de alimentos saludables y nutricionistas para ofrecer contenido adicional y recomendaciones. Esto puede fortalecer tu posición como fuente confiable de información nutricional y consejos de salud.
+						</Typography>
+					</Box>
+    			</Box>
+			</ContainerSectionCus>
+			<ContainerSectionCus step={2}>
+			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "480px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>FORTALEZA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Potencial para Fidelización: </strong> 
+						La aplicación móvil para recetas basadas en las etiquetas inteligentes puede fomentar la lealtad de los clientes y aumentar las ventas recurrentes.
+						</Typography>
+					</Box>
+					<Box sx={{ width: "450px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>OPORTUNIDAD</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Programas de Recompensas y Gamificación: </strong> 
+						Usando NFC y códigos QR, se lanza un programa de lealtad gamificado. Los clientes ganan puntos al explorar productos y recetas, canjeables por descuentos o eventos exclusivos.
+						</Typography>
+					</Box>
+    			</Box>
+				<Box sx={{width:"600px", height: "30px", alignSelf: "center", borderBottom: "1px solid #BDBDBD", borderLeft: "1px solid #BDBDBD", borderRight: "1px solid #BDBDBD", borderRadius: "2px"}}></Box>
+				<Box sx={{ width:"0.5px", height: "30px", alignSelf: "center", borderLeft: "1px solid #BDBDBD"}}></Box>
+				<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "550px", height: "250px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>ESTRATEGIA FO</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Programa "Descubre y Cocina": </strong>
+						Implementamos un programa de lealtad gamificado "Descubre y Cocina". Los clientes ganan puntos al escanear productos, obtener recetas y descubrir detalles nutricionales. Al acumular puntos, se canjean por descuentos o acceso a eventos exclusivos. Desafíos mensuales incentivan compartir recetas en redes sociales, otorgando puntos extra.
+						</Typography>
+					</Box>
+    			</Box>
+			</ContainerSectionCus>
+			<ContainerSectionCus step={2}>
+			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "480px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>DEBILIDAD</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Educación del Consumidor: </strong> 
+						Los compradores pueden no estar familiarizados con la tecnología NFC o los códigos QR en el contexto de compras de comestibles, lo que requerirá una campaña de marketing educativo.
+						</Typography>
+					</Box>
+					<Box sx={{ width: "450px", height: "280px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>AMENAZA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Rechazo Tecnológico: </strong> 
+						A pesar de la tendencia creciente hacia la adopción de tecnología, existe una parte de la población que puede ser reacia a adoptar estos nuevos métodos de compra. Ya sea por desconocimiento, desconfianza o simplemente por preferir métodos tradicionales, esto podría limitar la penetración de mercado de la tienda.
+						</Typography>
+					</Box>
+    			</Box>
+				<Box sx={{width:"600px", height: "30px", alignSelf: "center", borderBottom: "1px solid #BDBDBD", borderLeft: "1px solid #BDBDBD", borderRight: "1px solid #BDBDBD", borderRadius: "2px"}}></Box>
+				<Box sx={{ width:"0.5px", height: "30px", alignSelf: "center", borderLeft: "1px solid #BDBDBD"}}></Box>
+				<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "550px", height: "250px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>ESTRATEGIA DA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Educación del Consumidor:  </strong>
+						Lanzar una campaña de marketing educativo para abordar la falta de familiaridad de los consumidores con la tecnología NFC y los códigos QR. Esto ayudará a superar la debilidad de la educación del consumidor y a mitigar el riesgo de que los compradores no adopten la tecnología.
+						</Typography>
+					</Box>
+    			</Box>
+			</ContainerSectionCus>
+			<ContainerSectionCus step={2}>
+			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "480px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>DEBILIDAD</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Privacidad de los Datos: </strong> 
+						Se debe abordar adecuadamente las preocupaciones de privacidad de los datos, ya que recopila información personal de los usuarios a través de la aplicación.
+						</Typography>
+					</Box>
+					<Box sx={{ width: "450px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>AMENAZA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Dependencia Tecnológica: </strong> 
+						Fallos en etiquetas NFC o la app pueden dañar la reputación de la tienda, y ciberataques comprometen la seguridad del cliente.
+						</Typography>
+					</Box>
+    			</Box>
+				<Box sx={{width:"600px", height: "30px", alignSelf: "center", borderBottom: "1px solid #BDBDBD", borderLeft: "1px solid #BDBDBD", borderRight: "1px solid #BDBDBD", borderRadius: "2px"}}></Box>
+				<Box sx={{ width:"0.5px", height: "30px", alignSelf: "center", borderLeft: "1px solid #BDBDBD"}}></Box>
+				<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "550px", height: "250px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>ESTRATEGIA DA</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Fortalecimiento de la Infraestructura de Seguridad Digital:  </strong>
+						Implementar una infraestructura de seguridad digital robusta para proteger los datos personales de los usuarios y garantizar su privacidad. Esto incluiría la adopción de protocolos de encriptación avanzados, la contratación de expertos en ciberseguridad, la realización de auditorías de seguridad regulares y la formación de todo el personal sobre las mejores prácticas de seguridad. Además, sería fundamental comunicar activamente a los clientes las medidas de seguridad adoptadas para proteger sus datos, para generar confianza y alentar su uso continuo de la aplicación.
+						</Typography>
+					</Box>
+    			</Box>
+			</ContainerSectionCus>
+			<ContainerSectionCus step={2}>
+			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "480px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>DEBILIDAD</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Costos Iniciales: </strong> 
+						La implementación de etiquetas inteligentes y una aplicación móvil sofisticada requerirá una inversión significativa en tecnología y desarrollo de software. 
+						</Typography>
+					</Box>
+					<Box sx={{ width: "450px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>OPORTUNIDAD</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Expansión de Servicios: </strong> 
+						Se podría expandir los servicios para incluir opciones de entrega a domicilio o recogida en la tienda basadas en las preferencias del cliente.
+						</Typography>
+					</Box>
+    			</Box>
+				<Box sx={{width:"600px", height: "30px", alignSelf: "center", borderBottom: "1px solid #BDBDBD", borderLeft: "1px solid #BDBDBD", borderRight: "1px solid #BDBDBD", borderRadius: "2px"}}></Box>
+				<Box sx={{ width:"0.5px", height: "30px", alignSelf: "center", borderLeft: "1px solid #BDBDBD"}}></Box>
+				<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "550px", height: "250px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>ESTRATEGIA DO</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Gestión de Costos Iniciales: </strong>
+						Buscar formas de reducir los costos iniciales mediante la identificación de eficiencias en la implementación de etiquetas inteligentes y desarrollo de la aplicación. Esto permitirá aprovechar la oportunidad de expansión de servicios y colaboraciones estratégicas sin comprometer las finanzas.
+						</Typography>
+					</Box>
+    			</Box>
+			</ContainerSectionCus>
+			<ContainerSectionCus step={2}>
+			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "480px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>DEBILIDAD</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Competencia: </strong> 
+						Puede haber competidores establecidos en el mercado de comestibles que ofrezcan servicios similares o que estén dispuestos a adoptar tecnologías similares. 
+						</Typography>
+					</Box>
+					<Box sx={{ width: "450px", height: "220px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>OPORTUNIDAD</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Segmentación de Mercado:  </strong> 
+						Identificamos segmentos de mercado específicos interesados en la información nutricional detallada y los consejos de salud. 
+						</Typography>
+					</Box>
+    			</Box>
+				<Box sx={{width:"600px", height: "30px", alignSelf: "center", borderBottom: "1px solid #BDBDBD", borderLeft: "1px solid #BDBDBD", borderRight: "1px solid #BDBDBD", borderRadius: "2px"}}></Box>
+				<Box sx={{ width:"0.5px", height: "30px", alignSelf: "center", borderLeft: "1px solid #BDBDBD"}}></Box>
+				<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "space-around" }}>
+					<Box sx={{ width: "550px", height: "250px"}}>
+						<Typography paragraph sx={{ textAlign:"center", fontWeight: '500', fontSize: '24px', fontFamily: 'Oswald', lineHeight: 1.5 }}><strong>ESTRATEGIA DO</strong></Typography>
+						<Typography paragraph sx={{ fontWeight: '500', fontSize: '21px', fontFamily: 'Oswald', lineHeight: 1.5, textAlign: "center"}}>
+						<strong>Evolución con las Tendencias: </strong>
+						Mantener un estado flexible y adaptable para ajustarse rápidamente a los cambios en las tendencias de salud y las preferencias de los consumidores. Esto permitirá aprovechar las oportunidades emergentes y minimizar el impacto de las amenazas relacionadas con cambios en las tendencias.
+						</Typography>
+					</Box>
+    			</Box>
+			</ContainerSectionCus>
 			{
 				//Introduction
 			}
